@@ -1,0 +1,42 @@
+window {
+    margin: 0px;
+    border: 1px solid #262626; /* color8 */
+    background-color: #141414; /* background */
+    font-family: "JetBrains Mono", monospace;
+    color: #ffffff; /* foreground */
+}
+
+#input {
+    margin: 5px;
+    border: none;
+    color: #ffffff; /* foreground */
+    background-color: #262626; /* color8 */
+}
+
+#inner-box {
+    margin: 5px;
+    border: none;
+    background-color: #141414; /* background */
+}
+
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: #141414; /* background */
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    margin: 5px;
+    border: none;
+    color: #ffffff; /* foreground */
+}
+
+#entry:selected {
+    background-color: #303030; /* selection_background */
+    color: #141414; /* selection_foreground */
+}

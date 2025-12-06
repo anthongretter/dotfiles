@@ -1,0 +1,102 @@
+{
+	"layer": "bottom",	
+	"position": "top",
+    "height": 35,
+
+
+    "modules-left": ["cpu", "memory", "network"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["tray", "backlight", "pulseaudio", "battery", "clock"],
+
+
+	"hyprland/workspaces": {
+	  "format": "{icon}",
+	  "format-window-separator": " ",
+	  "window-rewrite-default": "",
+	  "window-rewrite": {
+			"title<.*youtube.*>": "", // Windows whose titles contain "youtube"
+			"class<firefox>": "", // Windows whose classes are "firefox"
+			"class<firefox> title<.*github.*>": "", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
+			"kitty": "", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
+			"code": "󰨞",
+		},
+	},
+
+	"hyprland/window": {
+		"format": "{}",
+		"max-length": 50
+	},
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 15
+	},
+
+
+    "clock": {
+        "format": "{:%b %e %R}",
+        "interval": 60
+	},
+
+	"memory": {
+		"interval": 3,
+		"format": "{used:0.1f}G/{total:0.1f}G RAM"
+	},
+
+	"cpu": {
+		"interval": 3,
+		"format": "{}% CPU",
+		"max-length": 10
+	},
+    
+    "battery": {
+        "bat": "BAT1",
+        "states": {
+              "full": 99,
+              "good": 98,
+              "normal": 98,
+              "warning": 20,
+              "critical": 20
+		},
+
+        "format": "{icon}  {capacity}%",
+        "format-good": "{icon}  {capacity}%", 
+        "format-full": "   {capacity}%",
+		"format-charging": "  {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "interval": 1
+	},
+
+    "network": {
+        "interface": "wlp3s0", 
+        "format-wifi": "  {ipaddr} {essid}",
+        "format-disconnected": "睊 Disconnected",
+        "interval": 60
+	},
+
+    "temperature": {
+	   	"thermal-zone": 0,
+		"format": "{icon} {temperatureC}°C",
+		"format-icons":[""],
+		"interval": 30
+	},
+
+	"backlight": {
+    	"device": "intel_backlight",
+    	"format": "{icon} {percent}%  ",
+    	"format-icons": ["","","",""],
+    	"interval": 60
+	},
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%  ",
+        "format-bluetooth": "  {volume}%  ",
+        "format-muted":"婢  Mute  ",
+        "interval": 60,
+
+        "format-icons": {
+			"default": [""]
+		}
+            
+	}
+}

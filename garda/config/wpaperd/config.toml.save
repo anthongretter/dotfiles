@@ -1,0 +1,6 @@
+[default]
+mode = "center"
+sorting = "ascending"
+
+[any]
+path = "/home/porath/.config/wpp.jpg"

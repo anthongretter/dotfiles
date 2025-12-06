@@ -1,0 +1,5 @@
+[default]
+mode = "center"
+
+[any]
+path = "/home/anthon/.config/wpp2.jpg"
