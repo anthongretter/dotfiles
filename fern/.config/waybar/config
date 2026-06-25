@@ -2,9 +2,9 @@
   "layer": "top",
   "position": "top",
 
-  "modules-left": ["hyprland/workspaces", "tray"],
+  "modules-left": ["hyprland/workspaces", "tray", "custom/mpris"],
   "modules-center": ["clock"],
-  "modules-right": ["cpu", "memory", "network"],
+  "modules-right": ["wireplumber", "cpu", "memory", "network#wifi", "network#anchor", "network#vpn"],
 
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -45,12 +45,37 @@
 	"max-length": 10
   },
 
-  "network": {
+"custom/mpris": {
+    "return-type": "json",
+    "exec": "ScrollMPRIS --no-status-icon --speed 10 --icon-format '{\"404\": \"  \", \"vlc\": \"  󰕼\", \"mpv\": \"  \", \"spotify\": \"  \"}'",
+    "escape": true,
+    "on-click": "playerctl play-pause"
+},
+
+  "network#wifi": {
     "interface": "wlp3s0",
     "format-icons": ["󰤟","󰤢","󰤥","󰤨"],
-    "format": "Disconnected 󰤭",
     "format-wifi": "{ipaddr} {icon}",
-    "format-disconnected": "Disconnected 󰤭",
+	"format-disconnected": "",
+
+    "tooltip": false,
+    "max-length": 50
+  },
+
+  "network#vpn": {
+    "interface": "nm-xfrm*", 
+    "format-ethernet": "{ipaddr} 󰳌",
+    "format-disconnected": "",
+    
+	"tooltip": false,
+    "max-length": 50
+  },
+
+
+  "network#anchor": {
+    "interface": "enp0s20f0u8",
+    "format-ethernet": "{ipaddr} 󰀱",
+	"format-disconnected": "",
 
     "tooltip": false,
     "max-length": 50
@@ -60,5 +85,16 @@
     "format": "{icon} {capacity}",
     "format-icons": ["󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
     "tooltip": false
-  }
+  },
+  "wireplumber": {
+    "format": "{node_name} - {volume}% {icon}",
+    "format-muted": "{node_name} 󰝟 ",
+    "format-icons": ["󰕿", "󰖀", "󰕾"],
+    "scroll-step": 5,
+    "max-volume": 100,
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "pavucontrol -t 3",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 1.0",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+}
 }

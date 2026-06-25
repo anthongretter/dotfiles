@@ -1,952 +1,3 @@
-rm -fr .config/nvim
-rm -fr .local/share/nvim
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
-vim
-rm -fr .local/share/nvim
-rm -fr .config/nvim
-rm -fr .cache/nvim
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
-vim
-ls .config/nvim/
-nano .config/nvim/README.md 
-rm -fr .config/nvim
-rm -fr .cache/nvim
-rm -fr .local/share/nvim
-git clone -b v2.0 https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
-vim
-cd .config/
-mv wpp.jpg wpp.jpg.back
-nvim
-nano .config/hypr/hyprland.conf 
-nano .config/wpaperd/config.toml
-nano .config/hypr/hyprland.conf 
-nano .config/wpaperd/config.toml
-nano .config/kitty/theme.conf 
-nano .config/wpaperd/config.toml
-killall wpaperd 
-nano .config/wpaperd/config.toml
-ls
-killall wpaperd 
-ls
-nano .config/kitty/kitty.conf
-ls
-killall wpaperd 
-nano .config/kitty/kitty.conf
-nano .config/
-ls
-cd college/
-ls
-cd
-nano .bashrc
-nano .config/hypr/hyprland.conf 
-ls
-wpaperd --help
-man wpaperd
-nano /usr/share/doc/wpaperd/README.md 
-nano .config/kitty/kitty.conf
-nano .config/kitty/theme.conf
-nano .config/kitty/theme.conf
-killall wpaperd 
-nano .config/wpaperd/config.toml
-kitten query-terminal 
-ls
-cd college/
-ls
-nano .bashrc
-ls
-nano .config/kitty/theme.conf
-ls
-nvim
-rm -fr .local/share/nvim
-rm -fr .cache/nvim
-rm -fr .config/nvim
-$XDG_CONFIG_HOME
-echo $XDG_CONFIG_HOME
-git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
-nvim
-sudo pacman -S vim
-ls
-sudo pacman -S helix 
-sudo pacman -S bash-language-server
-helix 
-sudo pacman -S kakoune
-kakoune
-kak 
-sudo pacman -R kakoune helix nvim vim
-sudo pacman -R kakoune helix neovim vim
-sudo pacman -S micro
-micro
-rm -
-rm -fr 
-rm -fr .local/share/nvim
-echo $TERM
-micro
-mkdir .config/micro/colorschemes
-micro .config/kitty/kitty.conf
-micro .config/kitty/theme.conf
-cd college/
-ls
-ls
-nano .bashrc
-ls
-cd college/
-ls
-nano .bashr
-nano .bashrc
-ncd
-cd
-nano .bashrc
-nano .config/kitty/kitty.conf
-ls
-cd college/
-ls
-ls
-nano .config/kitty/theme.conf
-micro .config/kitty/theme.conf
-echo $TERM
-ls
-;s
-ls
-column 
-sudo pacman -S neofetch
-paru -S neofetch
-colorscript 
-paru -S collumns
-paru -S columns
-;s
-ls
-nano .config/kitty/kitty.conf
-ls
-nano .bashrc
-cat .config/waybar/style.css | wl-copy 
-micro .config/waybar/style.css
-killall waybar 
-killall waybar 
-nano .config/micro/colorschemes/
-nano .config/micro/colorschemes/darkvoid.json
-micro
-nano .config/micro/colorschemes/darkvoid.json 
-micro .config/micro/colorschemes/darkvoid.json 
-mv .config/micro/colorschemes/darkvoid.json .config/micro/colorschemes/darkvoid.micro 
-rm -fr .config/BraveSoftware
-cat .config/kitty/theme.conf 
-killall waybar 
-nano .config/waybar/config 
-cat .config/kitty/
-cat .config/waybar/
-cat .config/waybar/style.css | wl-copy 
-micro .config/waybar/style.css
-killall waybar 
-micro .config/waybar/style.css
-flameshot 
-micro
-nano .config/kitty/theme.conf
-micro .config/kitty/theme.conf
-killall waybar 
-cat .config/kitty/theme.conf | wl-copy 
-ls
-cd college/
-firefox pictures/.ronara.jpg
-micro .bashrc
-nano .config/kitty/theme.conf
-cd college/
-killall waybar 
-nano .config/kitty/kitty.conf
-ls
-ls
-nano .bashrc
-ls
-micro .config/waybar/style.css
-micro .config/micro/colorschemes/darkvoid.micro 
-ls .config/micro/colorschemes/
-micro .config/micro/colorschemes/darkvoid.micro 
-cat .config/waybar/style.css | wl-copy 
-micro .config/waybar/style.css
-ls
-micro
-micro 
-alias nano='nano'
-nano .bashrc
-alias nano='nano'
-nano .bashrc
-sudo nano /opt/discord/resources/build_info.json 
-micro .config/micro/colorschemes/darkvoid.micro 
-micro .bashrc
-micro .config/micro/colorschemes/darkvoid.micro 
-nano .config/micro/colorschemes/darkvoid.json 
-ls
-nano .config/micro/colorschemes/darkvoid.json 
-ls
-nano .config/micro/colorschemes/darkvoid.json 
-ls
-nano .config/micro/colorschemes/darkvoid.json 
-alias nano='nano'
-nano .bashrc
-nano .config/kitty/kitty.conf
-nano .config/kitty/theme.conf
-ls
-cd college/
-nano .bashrc
-cd
-nano .bashrc
-ls
-nano .config/kitty/kitty.conf
-ls
-nano .config/kitty/theme.conf
-cd college/
-ls
-nano .config/kitty/theme.conf
-ls
-nano .bashrc
-ls
-micro .config/micro/colorschemes/darkvoid.micro 
-ls
-nano .bashrc
-cd college/
-ls
-ls
-micro .config/micro/colorschemes/darkvoid.micro 
-nano .config/kitty/theme.conf
-cd college/
-ls
-mkdir greendrag
-cd greendrag/
-sudo pacman -S secrets 
-freeorg.hsecrets
-systemctl status pass-secret-service
-nano .config/hypr/hyprland.conf 
-sudo pacman -S mermaid-cli 
-sudo pacman -Syy mermaid-cli 
-sudo pacman - mermaid-cli 
-sudo pacman -R mermaid-cli 
-ls
-nano .config/hypr/hyprland.conf 
-d downloads/
-cd downloads/
-mv CV-2.pdf cv-anthon.pdf
-paru -S flameshot
-paru -R flameshot 
-sudo pacman -S xdg-desktop-portal xdg-desktop-portal-hyprland
-paru -S flameshot 
-paru -S grim
-mkdir -p .config/flameshot/
-nano .config/flameshot/flameshot.ini
-cd college/eh/
-ls
-ls final/
-cd bash/
-ls
-nano solution.py 
-cd ..
-ls
-cd symetric/
-ls
-cd ..
-cd morphing/
-ls
-nano solution.py 
-nano test.py 
-cd ..
-cd pwn/
-ls
-nano bin.py 
-ls[
-ls
-cd college/eh/
-cd reports/
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M master
-git remote add origin git@github.com:anthongretter/ethical-hacking-reports.git
-git push -u origin master
-ls
-git status 
-git add .
-git commit -m "first commit"
-git branch -M master
-git remote add origin git@github.com:anthongretter/ethical-hacking-reports.git
-git push -u origin master
-df -h
-rm -fr .cache/
-df -h
-cd source/
-ls
-cd HealthyIG/
-ls
-killall firef
-killall firefox 
-ls
-cd projects/
-ls
-cd tests/
-ls
-cd ..
-cd KleinMix/
-ls
-ls target/
-cat pom.xml 
-paru -S drawio-desktop-bin 
-ls
-
-killall steam
-sudo pacman -S keepassxc 
-systemctl status keepassxc
-keepassxc-cli 
-nano ${XDG_DATA_HOME:-$HOME/.local/share}/dbus-1/services/org.freedesktop.secrets.service
-ls ${XDG_DATA_HOME:-$HOME/.local/share}/dbus-1/services/org.freedesktop.secrets.service
-ls ${XDG_DATA_HOME:-$HOME/.local/share}/dbus-1/services/
-ls ${XDG_DATA_HOME:-$HOME/.local/share}/dbus-1/
-ls ${XDG_DATA_HOME:-$HOME/.local/share}/
-mkdir -p ${XDG_DATA_HOME:-$HOME/.local/share}/dbus-1/services/
-nano ${XDG_DATA_HOME:-$HOME/.local/share}/dbus-1/services/org.freedesktop.secrets.service
-reboot
-sudo pacman -R keepassxc 
-rm ${XDG_DATA_HOME:-$HOME/.local/share}/dbus-1/services/org.freedesktop.secrets.service
-bison 
-man bison[
-man bison
-llvm-lib --version
-llvm-lib -V
-llvm-lib -v
-llvm-config -v
-llvm-config --version
-cat projects/mylang/IDEA.md 
-nano .config/hypr/hyprland.conf 
-cat /tmp/electronics-v13-i05_20251001.bib 
-ls
-cd college/modsim/
-ls
-WINEPREFIX=$HOME/college/modsim/.wine_arena15  wine .wine_arena15/drive_c/Program\ Files/Rockwell\ Software/Arena/Arena.exe 
-nano .config/hypr/hyprland.conf 
-cd college/modsim/
-ls
-WINEPREFIX=$HOME/college/modsim/.wine_arena15  wine .wine_arena15/drive_c/Program\ Files/Rockwell\ Software/Arena/Arena.exe 
-mkdir -p college/ia-ga
-ls
-python -m venv venv
-nano .config/hypr/hyprland.conf 
-. /home/porath/college/ia-ga/venv/bin/activate ; clear
-pip install geneticalgorithm
-chmod +x graphcolorga.py 
-./graphcolorga.py 
-pip install numpy
-pip install matplotlib
-./graphcolorga.py 
-. /home/porath/college/ia-ga/venv/bin/activate ; clear
-[./venv/bin/pip install geneticalgorithm numpy matplotlib]
-./graphcolorga.py 
-tar -xf GD01_c.tar.gz 
-pip install scipy
-./graphcolorga.py 
-tar -xf Trefethen_20b.tar.gz 
-./graphcolorga.py 
-git init
-git add ,
-git add .
-git commit -m "Adding everything lol"
-git remote add origin git@github.com:anthongretter/graph-coloring-ga.git 
-git push -u origin master
-cd college/ia-ga/
-ls
-cd plots/
-ls
-mv 'convergence_26_fullerene_DELIVERED.png
-' convergence_26_fullerene_DELIVERED.png 
-cd college/ia-ga/
-ls
-cd
-cd donw
-cd downloads/
-ls
-mv AI_deliverable_3-3.pdf relatorio-grupo-ia6.pdf
-firefox relatorio-grupo-ia6.pdf 
-. /home/porath/college/ia-ga/venv/bin/activate ; clear
-python -v
-python --V
-python -V
-cd plots/
-unzip resized-images.zip 
-pip freeze
-git status 
-git add .
-git log
-git commit -m "Fixing names and removing old graph"
-git push
-paru -S todoist-bin
-todoist 
-paru -R todoist-bin 
-paru -S todoist-appimage
-todoist 
-firefox downloads/CV-1.pdf 
-firefox downloads/CV.pdf 
-downloaddownloads/CV-1.pdf 
-ls documents/
-mv downloads/CV-2.pdf documents/CV.pdf
-firefox downloads/CV-1.pdf 
-firefox documents/CV.pdf 
-cd downloads/
-unzip microdados_enem_2019.zip 
-cat DADOS/MICRODADOS_ENEM_2019.csv 
-cat DADOS/MICRODADOS_ENEM_2019.csv | grep SC
-cat DADOS/MICRODADOS_ENEM_2019.csv | grep Santa\ Catarina
-cat DADOS/MICRODADOS_ENEM_2019.csv | grep "Santa Catarina"
-cat DADOS/MICRODADOS_ENEM_2019.csv | grep "Pomerode"
-cat DADOS/MICRODADOS_ENEM_2019.csv | grep "Blumenau"
-cat DADOS/MICRODADOS_ENEM_2019.csv | head
-ls
-rm -fr DADOS/ DICIONÁRIO/ INPUTS/ LEIA-ME\ E\ DOCUMENTOS\ TÉCNICOS/ PROVAS\ E\ GABARITOS/
-ls
-df -h
-ls
-firefox college/modsim/ms2.html 
-nano .config/hypr/hyprland.conf 
-cd college/modsim/
-ls
-WINEPREFIX=$HOME/college/modsim/.wine_arena15  wine .wine_arena15/drive_c/Program\ Files/Rockwell\ Software/Arena/Arena.exe 
-[A
-WINEPREFIX=$HOME/college/modsim/.wine_arena15  wine .wine_arena15/drive_c/Program\ Files/Rockwell\ Software/Arena/Arena.exe 
-firefox 
-killall firefox 
-cd college/tcc/
-ls
-cd paprevisit/
-ls
-firefox papers_by_year.png
-nano script.py 
-ls papers
-ls papers/post2015/
-ls papers/pre2015/
-ls
-. /home/porath/college/ia-ga/venv/bin/activate ; clear
-nano .config/hypr/hyprland.conf 
-cd college/modsim/
-WINEPREFIX=$HOME/college/modsim/.wine_arena15  wine .wine_arena15/drive_c/Program\ Files/Rockwell\ Software/Arena/Arena.exe 
-killalll steam
-nano .config/waybar/style.css 
-df -h
-du -h college
-sudo pacman -S baobab 
-df -h
-rm -fr .local/share/Trash
-df -h
-nano .config/hypr/hyprland.conf 
-cd college/modsim/
-ls
-WINEPREFIX=$HOME/college/modsim/.wine_arena15  wine .wine_arena15/drive_c/Program\ Files/Rockwell\ Software/Arena/Arena.exe 
-nano .config/hypr/hyprland.conf 
-mv downloads/CV-4.pdf cv-anthon.pdf
-firefox cv-anthon.pdf 
-cd college/modsim/
-ls
-WINEPREFIX=$HOME/college/modsim/.wine_arena15  wine .wine_arena15/drive_c/Program\ Files/Rockwell\ Software/Arena/Arena.exe 
-nano .config/hypr/hyprland.conf 
-nano .config/waybar/config 
-killall waybar 
-cd college/modsim/
-WINEPREFIX=$HOME/college/modsim/.wine_arena15  wine .wine_arena15/drive_c/Program\ Files/Rockwell\ Software/Arena/Arena.exe 
-cd college/modsim/
-ls
-WINEPREFIX=$HOME/college/modsim/.wine_arena15  wine .wine_arena15/drive_c/Program\ Files/Rockwell\ Software/Arena/Arena.exe 
-cd college/modsim/
-ls
-firefox ms3.html 
-cd college/modsim/
-WINEPREFIX=$HOME/college/modsim/.wine_arena15  wine .wine_arena15/drive_c/Program\ Files/Rockwell\ Software/Arena/Arena.exe 
-WINEPREFIX=$HOME/college/modsim/.wine_arena15  winetricks mspatcha 
-WINEPREFIX=$HOME/college/modsim/.wine_arena15  wine .wine_arena15/drive_c/Program\ Files/Rockwell\ Software/Arena/Arena.exe 
-WINEPREFIX=$HOME/college/modsim/.wine_arena15  winetricks dotnet472
-WINEPREFIX=$HOME/college/modsim/.wine_arena15  wine .wine_arena15/drive_c/Program\ Files/Rockwell\ Software/Arena/Arena.exe 
-ls college/modsim/
-ls .config/dotfiles/
-mkdir -p .files/config
-nano .config/hypr/hyprland.conf 
-cp /usr/share/hypr/hyprland.conf .config/hypr/hyprland.conf 
-nano .config/hypr/hyprland.conf 
-hyprland
-firefox
-sudo pacman -S firefox
-sudo nano /etc/mkinitcpio.conf
-cat .ssh/github.pub 
-git clone git@github.com:anthongretter/.files.git
-nano .ssh/config
-git clone git@github.com:anthongretter/.files.git
-cp -R .files/config .
-ls .config/
-cp -R .files/.bash* .
-cp -R .files/.nanorc .
-nano .config/hypr/hyprland.conf 
-ls
-ls .config/
-ls -a .config/
-mv config/ .config
-ls .config/
-rm -fr .config/
-mkdir .config
-cp -R .files/config/* .config/.
-ls .config/
-nano .config/hypr/hyprland.conf 
-nano .config/hypr/hyprland.conf 
-sudo mkinitcpio -P 
-df -h
-ls /boot/
-du /boot
-du /boot -h
-rm -fr /boot/grub/themes
-sudo rm -fr /boot/grub/themes
-du /boot -h
-sudo 
-du /boot -h
-reboot
-sudo pacman -S which
-nvidia-smi 
-nmcli
-nano .config/hypr/hyprland.conf 
-cat /sys/module/nvidia_drm/parameters/modeset
-sudo pacman -S nvidia-drm
-sudo nano /etc/modprobe.d/nvidia.conf
-sudo pacman -S egl-wayland 
-sudo pacman -S nvidia-utils
-sudo pacman -S nvidia-dkms 
-reboot
-cat /sys/module/nvidia_drm/parameters/modeset
-nvidia-smi 
-poweroff 
-sudo pacman -S libva-nvidia-driver 
-sudo pacman -S spotify-launcher 
-nano .config/spotify-launcher.conf
-nano .config/hypr/hyprland.conf 
-sudo nano /etc/mkinitcpio.conf
-nvidia-smi
-reboot
-nvidia-smi
-nano .bashrc 
-nmcli 
-killall waybar 
-reflector -h
-reflector --list-countries
-sudo reflector --connection-timeout 15 -n 10 -p https --sort rate --threads 300 --save /etc/pacman.d/mirrorlist 
-sudo reflector --connection-timeout 15 --download-timeout 15 -n 10 -p https --sort rate --threads 300 --save /etc/pacman.d/mirrorlist 
-sudo cat /etc/pacman.d/mirrorlist 
-sudo reflector --connection-timeout 15 --download-timeout 15 -n 10 -p https --sort rate --threads 300 --save /etc/pacman.d/mirrorlist -c Brazil,Argentina,Uruguai
-sudo cat /etc/pacman.d/mirrorlist 
-journalctl 
-nano .config/waybar/config
-htop
-top
-sudo pacman -S nvidia-dkms 
-sudo pacman -Syy nvidia-dkms 
-nmcli
-nmcli device wifi show
-nmcli device wifi list
-sudo pacman -Syy nvidia-dkms 
-sudo nano /etc/mkinitcpio.conf
-sudo pacman -Syy nvidia-dkms 
-sudo pacman -S nvidia-dkms linux-headers 
-sudo pacman -S nvidia-utils egl-wayland 
-sudo nano /etc/mkinitcpio.conf
-sudo mkinitcpio -P
-sudo nano /etc/mkinitcpio.conf
-sudo mkinitcpio -P
-reboot
-nvidia-smi 
-nvidia-smi
-sudo pacman -S nvidia-open-dkms 
-sudo cat /sys/module/nvidia_drm/parameters/modeset
-sudo nano /etc/default/grub 
-reboot
-nvidia-smi
-sudo pacman -S nvidia
-sudo nano /etc/mkinitcpio.conf
-sudo mkinitcpio -P
-reboot
-sudo mkinitcpio -P
-sudo pacman -S nvidia
-nvidia-smi
-sudo nano /etc/mkinitcpio.conf
-sudo mkinitcpio -P
-reboot
-nmcli device wifi list
-nvidia-smi
-sudo pacman -Syu
-reboot
-nvidia-smi
-sudo nano /etc/mkinitcpio.conf
-sudo mkinitcpio -P
-reboot
-nvidia-smi
-cat /sys/module/nvidia_drm/parameters/modeset
-sudo nano /etc/default/grub 
-sudo nano /etc/modprobe.d/nvidia.conf 
-sudo grub-mkconfig -o /boot/grub/grub.cfg 
-reboot
-nvidia-smi
-sudo nano /etc/modprobe.d/nvidia.conf 
-sudo nano /etc/default/grub 
-sudo grub-mkconfig -o /boot/grub/grub.cfg 
-killall hyprland
-killall Hyprland 
-sudo pacman -R hyprland
-sudo pacman -S hyprland
-reboot
-nvidia-smi
-sudo cat /sys/module/nvidia_drm/parameters/modeset
-lsmod
-lsmod | grep no
-pacman -Qs nvidia
-pacman -S pulseaudio
-sudo pacman -S pulseaudio
-sudo pacman -S sof-firmware base-devel
-reboot
-nvidia-smi
-sudo pacman -S plasma
-reboot
-nvidia-smi
-ls .config/
-systemctl enable NetworkManager
-sudo systemctl enable NetworkManager
-sudo pacman -S ly
-systemctl enable ly
-sudo systemctl enable ly
-exit
-cd
-su root
-nmcli dev wifi connect APT402G2. --ask
-sudo pacman -S bash-completion
-sudo pacman -S plasma
-re
-reflector --sort rate --threads 300 -p https -n 10
-reflector --sort rate --threads 300 -p https -n 10 --download-timeout 20 --connect-timeout 20
-reflector --sort rate --threads 300 -p https -n 10 --download-timeout 20 --connection-timeout 20
-cat /etc/pacman.d/mirrorlist 
-sudo reflector --sort rate --threads 300 --protocol https --latest 10 --download-timeout 20 --connection-timeout 20 --save /etc/pacman.d/mirrorlist 
-cat /etc/pacman.d/mirrorlist 
-cat /etc/resolv.conf 
-ping https://mirror.lcarilla.de/archlinux/extra/os/x86_64/extra.db
-ping https://london.mirror.pkgbuild.com/extra/os/x86_64/extra.db
-ping https://london.mirror.pkgbuild.com
-sudo nano /etc/resolv.conf 
-ping https://london.mirror.pkgbuild.com
-ping london.mirror.pkgbuild.com
-sudo reflector --sort rate --threads 300 --protocol https --latest 10 --download-timeout 20 --connection-timeout 20 --country Brazil --save /etc/pacman.d/mirrorlist 
-nano /etc/pacman.d/mirrorlist 
-sudo pacman -S plasma
-sudo pacman -S nvidia nvidia-utils
-sudo pacman -Syu
-sudo pacman -Ss nvidia 32
-sudo pacman -Ss nvidia
-sudo pacman -Ss nvidia | less
-sudo pacman -Ss lib32
-sudo nano /etc/pacman.conf 
-sudo pacman -Ss lib32
-sudo pacman -Syy
-sudo pacman -Ss nvidia
-sudo pacman -S lib32-nvidia-utils 
-sudo pacman -S kitty
-nvidia-smi 
-sudo pacman -S firefox
-cat /sys/module/nvidia_drm/parameters/modeset 
-sudo grub
-sudo grub-mkconfig -o /boot/grub/grub.cfg 
-echo options nvidia_drm modeset=1 | sudo tee /etc/modprobe.d/nvidia_drm.conf
-sudo mkinitcpio -P
-sudo pacman -Ss egl
-nvidia-smi 
-l
-sudo cat /sys/module/nvidia_drm/parameters/modeset
-sudo nano /etc/mkinitcpio.conf
-sudo mkinitcpio -P
-sudo find -name "*plasma.desktop" /
-sudo find / -name "*plasma.desktop"
-sudo nano /usr/share/wayland-sessions/plasma.desktop 
-sudo pacman -S xrandr
-sudo pacman -S xorg-xrandr 
-sudo pacman -S xorg-xwayland 
-sudo nano /etc/ly/config.ini 
-sudo nano /usr/share/wayland-sessions/plasma.desktop 
-reboot
-nvidia-smi
-sudo cat /sys/module/nvidia_drm/parameters/modeset
-lspci -k | grep -A 3 VGA
-sudo modprobe nvidia_drm modeset=1
-lsmod | grep nvidia
-dmesg | grep -i nvidia | tail -20
-sudo dmesg | grep -i nvidia | tail -20
-sudo pacman -R plasma
-sudo pacman -R plasma-desktop 
-sudo pacman -R $(pacman -Qdtq) 
-sudo pacman -R plasma-*
-sudo pacman -R plasma
-sudo pacman -R plasma kio-extras 
-sudo pacman -S hyprland
-ls
-sudo nano /etc/default/grub 
-sudo grub-mkconfig -o /boot/grub/grub.cfg 
-reboot
-nvidia-smi 
-nano .config/hypr/hyprland.conf 
-cd .config/
-pwd
-sudo pacman -S wpaperd waybar wofi
-nano .config/hypr/hyprland.conf 
-nano .config/wpaperd/config.toml
-nano .config/hypr/hyprland.conf 
-sudo pacman -S ttf-nerd-fonts-symbols
-killall waybar 
-nano .config/wpaperd/config.toml
-logout 
-exit
-killall Hyprland 
-cd .config/
-ls
-firefox wpp.jpg
-ls
-sudo pacman -S ttf-jetbrains-mono
-killall waybar 
-nano waybar/config
-nano waybar/style.css
-killall waybar 
-cp wpp.jpg ../.
-cd
-ls
-firefox wpp
-firefox wpp.jpg
-mv wpp.jpg wpp.png
-ls
-nano .config/wpaperd/config.toml
-killall Hyprland 
-ls
-nano .config/hypr/hyprpaper.conf 
-nvidia-smi 
-killall wpaperd 
-nvidia-smi 
-mkdir college
-cd college/
-mkdir thesis
-rmdir thesis/
-mkdir bsc
-rmdir bsc/
-cd ..
-rmdir college/
-mkdir bsc
-cd bsc/
-mkdir thesis
-cd thesis/
-ls
-mkdir experiments
-cd experiments/
-nano tryme.c
-nano tryme1.c
-nano tryme2.c
-rm tryme1*
-rm tryme2.c 
-ls
-clang
-sudo pacman -S clang llvm
-clang -O0 --emit-llvm tryme.c -o tryme.ll 
-clang -O0 -emit-llvm tryme.c -o tryme.ll 
-clang -O0 -emit-llvm -c tryme.c -o tryme.ll 
-nano tryme.c 
-clang -O0 -emit-llvm -c tryme.c -o tryme.ll 
-nano tryme.c 
-clang -O0 -emit-llvm -c tryme.c -o tryme.ll 
-ls
-nano tryme.ll
-clang -O0 -emit-llvm -s tryme.c -o tryme.ll 
-clang -O0 -emit-llvm -S tryme.c -o tryme.ll 
-nano tryme.ll
-nano tryme.c
-clang -O0 -emit-llvm -S tryme.c -o tryme.ll 
-nano tryme.ll
-opt --passes dce -S tryme.ll -o tryme_dce.ll
-nano tryme_dce.ll 
-cat tryme.ll
-opt --passes adce -S tryme.ll -o tryme_adce.ll
-cat tryme-adce.ll
-cat tryme_adce.ll
-nano tryme_adce.ll
-opt --passes globaldce -S tryme.ll -o tryme_globaldce.ll
-nano tryme_globaldce.ll 
-diff tryme_globaldce.ll tryme_dce.ll 
-diff tryme_globaldce.ll tryme_adce.ll 
-opt --passes globalopt -S tryme.ll -o tryme_globalopt.ll
-nano tryme_globalopt.ll 
-diff tryme_globalopt.ll tryme_globaldce.ll 
-opt --passes dce -S tryme_globalopt.ll -o tryme_globalopt_dce.ll
-nano tryme_globalopt_dce.ll 
-opt --passes adce -S tryme_globalopt.ll -o tryme_globalopt_adce.ll
-nano tryme_globalopt_adce.ll 
-opt --passes globaldce -S tryme_globalopt.ll -o tryme_globalopt_globaldce.ll
-nano tryme_globalopt_globaldce.ll 
-opt --passes globalopt,globaldce -S tryme.ll -o tryme_.ll
-nano tryme_.ll 
-opt --passes ipsccp -S tryme.ll -o tryme_.ll
-nano tryme_.ll 
-diff tryme.ll tryme_.ll 
-opt --passes sccp -S tryme.ll -o tryme_.ll
-nano tryme_.ll 
-opt --passes globalopt,sccp -S tryme.ll -o tryme_.ll
-nano tryme_.ll 
-opt --passes gvn -S tryme.ll -o tryme_.ll
-nano tryme_.ll 
-opt --passes globalopt,gvn -S tryme.ll -o tryme_.ll
-nano tryme_.ll 
-diff tryme.ll tryme_.ll 
-opt --passes globals-aa -S tryme.ll -o tryme_.ll
-opt --passes instcombine -S tryme.ll -o tryme_.ll
-nano tryme_.ll 
-diff tryme.ll tryme_.ll 
-opt --passes globalopt,instcombine -S tryme.ll -o tryme_.ll
-nano tryme_.ll 
-diff tryme.ll tryme_.ll 
-opt --passes globalopt,ipsccp -S tryme.ll -o tryme_.ll
-diff tryme.ll tryme_.ll 
-opt --passes globalopt,ipsccp,adce -S tryme.ll -o tryme_.ll
-diff tryme.ll tryme_.ll 
-opt -O3 -S tryme.ll -o tryme_.ll
-diff tryme.ll tryme_.ll 
-nano tryme_.ll 
-rm *.ll
-nano tryme.c 
-clang -O0 -emit-llvm -S tryme.c -o tryme.ll 
-nano tryme.ll
-opt --passes sccp -S tryme.ll -o tryme_sccp.ll
-nano tryme_sccp.ll
-diff tryme.ll tryme_sccp.ll 
-opt --passes ipsccp -S tryme.ll -o tryme_sccp.ll
-diff tryme.ll tryme_sccp.ll 
-opt --passes gvn -S tryme.ll -o tryme_.ll
-diff tryme.ll tryme_.ll 
-opt --passes acde -S tryme.ll -o tryme_.ll
-opt --passes adce -S tryme.ll -o tryme_.ll
-diff tryme.ll tryme_.ll 
-opt --passes sccp,adce -S tryme.ll -o tryme_.ll
-diff tryme.ll tryme_.ll 
-opt --passes instcombine -S tryme.ll -o tryme_.ll
-diff tryme.ll tryme_.ll 
-opt -O3 -S tryme.ll -o tryme_.ll
-diff tryme.ll tryme_.ll 
-cat tryme.c
-nano tryme.c 
-clang -O0 -emit-llvm -S tryme.c -o tryme.ll 
-nano tryme.ll 
-opt --passes sccp -S tryme.ll -o tryme_.ll
-nano tryme_.ll 
-opt --passes globalopt -S tryme.ll -o tryme_.ll
-nano tryme_.ll 
-opt --passes adce -S tryme.ll -o tryme_.ll
-nano tryme_.ll 
-opt -O3 -S tryme.ll -o tryme_.ll
-nano tryme_.ll 
-opt --passes ipsccp -S tryme.ll -o tryme_.ll
-nano tryme_.ll 
-nano tryme.ll 
-nano tryme.c 
-watch -n 1 'cat $HOME/bsc/thesis/experiments/tryme_o.ll'
-watch -n 1 'cat $HOME/bsc/thesis/experiments/tryme__o.ll'
-diff tryme__.ll tryme__o.ll 
-nano tryme.c
-nano tryme.ll
-nano tryme.c
-nano tryme.ll
-nano tryme.c
-cat tryme.c 
-cat tryme.ll
-cd bsc/thesis/experiments/
-ls
-opt --passes instcombine -S tryme.ll -o tryme_.ll 
-nano tryme_.ll 
-opt --passes dce -S tryme_.ll -o tryme__.ll 
-nano tryme__.ll 
-diff tryme_.ll tryme__.ll
-opt --passes adce -S tryme_.ll -o tryme__.ll
-diff tryme_.ll tryme__.ll
-nano tryme__.ll 
-opt --passes adce -S tryme.ll -o tryme_o.ll
-opt --passes instcombine -S tryme_o.ll -o tryme__o.ll
-ls
-rm tryme_*
-ls
-clang -O0 -emit-llvm -S tryme.c -o tryme.ll 
-opt --passes sccp -S tryme.ll -o tryme_sccp.ll
-opt --passes gvn -S tryme.ll -o tryme_gvn.ll
-opt --passes ipsccp -S tryme.ll -o tryme_ipsccp.ll
-opt --passes globalopt -S tryme.ll -o tryme_ipsccp.ll
-opt --passes globaldce -S tryme.ll -o tryme_globaldce.ll
-opt --passes acde -S tryme.ll -o tryme_acde.ll
-opt --passes adce -S tryme.ll -o tryme_adce.ll
-opt --passes instcombine -S tryme.ll -o tryme_inst.ll
-opt --passes adce -S tryme_inst.ll -o tryme_inst_adce.ll
-clang -O0 -emit-llvm -S tryme.c -o tryme.ll 
-rm tryme_*
-opt --passes adce -S tryme.ll -o tryme_adce.ll
-opt --passes instcombine -S tryme.ll -o tryme_instcombine.ll
-opt --passes simplifycfg -S tryme.ll -o tryme_cfg.ll
-opt --passes instcombine -S tryme.ll -o tryme_cfg_inst.ll
-opt --passes instcombine -S tryme_cfg.ll -o tryme_cfg_inst.ll
-opt --passes simplifycfg -S tryme_inst.ll -o tryme_inst_cfg.ll
-watch -n 'cat tryme_.ll'
-watch -n 1 'cat tryme_.ll'
-watch -n 1 'cat $HOME/bsc/thesis/experiments/tryme_.ll'
-cat tryme.ll
-cd bsc/thesis/experiments/
-ls
-cat tryme.ll
-nano tryme_sccp.ll 
-diff tryme.ll tryme_sccp.ll 
-diff tryme.ll tryme_gvn.ll 
-nano tryme_gvn.ll 
-diff tryme.ll tryme_ipsccp.ll 
-diff tryme.ll tryme_globaldce.ll 
-diff tryme.ll tryme_adce.ll 
-diff tryme.ll tryme_inst.ll 
-nano tryme_inst.ll 
-nano tryme_inst_adce.ll 
-cat tryme_adce.ll
-ls
-rm tryme_adce.ll 
-mv tryme_instcombine.ll tryme_inst.ll
-nano tryme_inst_cfg.ll 
-nano tryme_cfg_inst.ll 
-cat tryme.ll
-cd bsc/thesis/experiments/
-ls
-cat tryme_cfg.ll 
-diff tryme_cfg tryme.ll
-diff tryme_cfg.ll tryme.ll
-diff tryme_cfg_inst.ll tryme.ll
-cat tryme_cfg_inst.ll 
-cat tryme_inst.ll 
-cat tryme_inst_cfg.ll 
-cat tryme_inst.ll 
-cat tryme.c
-nano tryme.c
-clang -O0 -emit-llvm -S tryme.c -o tryme.ll 
-nano tryme.c
-clang -O0 -emit-llvm -S tryme.c -o tryme.ll 
-rm tryme_*
-opt --passes simplifycfg,instcombine -S tryme.ll -o tryme_is.ll
-nano tryme_is.ll 
-opt --passes instcombine,simplifycfg -S tryme.ll -o tryme_si.ll
-nano tryme_is.ll 
-nano tryme_si.ll 
-opt --passes instcombine -S tryme.ll -o tryme_inst.ll
-opt --passes simplifycfg -S tryme_inst.ll -o tryme_inst_cfg.ll
-nano tryme_inst_cfg.ll 
-nano tryme.ll
-opt --passes instcombine,simplifycfg -S tryme.ll -o tryme_si.ll
-opt --passes simplifycfg,instcombine -S tryme.ll -o tryme_is.ll
-nano tryme_si.ll 
-cat tryme.c
-ls
-rm tryme_*
-nano tryme.c
-opt --passes instcombine -S tryme.ll -o tryme_inst.ll
-opt --passes simplifycfg -S tryme_inst.ll -o tryme_inst_cfg.ll
-opt --passes simplifycfg -S tryme.ll -o tryme_cfg.ll
-opt --passes simplifycfg -S tryme_cfg.ll -o tryme_cfg_inst.ll
-cat tryme_inst_cfg.ll
-cat tryme.ll
 diff tryme.ll tryme_cfg.ll 
 cat tryme_cfg_inst.ll 
 cat tryme_inst.ll 
@@ -1850,3 +901,1100 @@ nano .config/kitty/kitty.conf
 sudo pacman -R alacritty 
 sudo pacman -R $(pacman -Qdtq)
 sudo pacman -Syyu
+feh wpp.png 
+rm wpp.png 
+feh .config/wpp.jpg 
+feh .config/wpp2.jpg 
+feh pictures/wpp.jpg 
+cd .files/
+ls -a
+mv .* garda/.
+ls
+mv garda/.git/ .
+ls
+mkdir -p fern/config
+ls fern/config/
+ls garda/
+ls -a garda/
+ls -a fern/
+git add .
+git commit -m "add: create fern variant"
+git push
+cd .files/
+ls
+ls -a
+git branch
+mkdir garda
+mv * garda/.
+ls
+mkdir fern
+ls garda/config/
+cp -R ~/.config/hypr ~/.config/kitty ~/.config/user-dirs.dirs ~/.config/waybar ~/.config/wofi/ ~/.config/wpaperd/ ~/pictures/wpp.jpg ~/.config/zed fern/config/.
+cd
+cp .bash_history .bashrc .nanorc .files/fern/.
+mkdir opensource
+cd opensource/
+git clone git@github.com:anthongretter/zed.git
+ls
+pactl set-sink-mute @DEFAULT_SINK@ false
+sudo pacman -S pavucontrol
+sudo pacman -Syy pavucontrol
+pavucontrol 
+aplay -l
+arecord -l
+pacmd list-cards
+pacmd list-sinks
+pacmd list-sources
+sudo pacman -S alsa-utils 
+aplay -l
+arecord -l
+systemctl --user restart pulseaudio
+systemctl restart pulseaudio
+sudo pacman -S sof-firmware 
+sudo pacman -Syyu
+sudo pacman -Sy archlinux-keyring
+sudo pacman -Syu
+nano .config/hypr/hyprland.conf 
+paru -Syu
+pacman 
+pacman -Q
+cd source/
+ls
+cd paru/
+ls
+git pull
+makepkg -si
+paru -Syyu
+hyprpaper 
+killall hyprpaper 
+hyprpaper 
+ls
+ls -a
+feh pictures/nice.png 
+feh pictures/2025-11-10_00-34.png 
+feh pictures/wpp.jpg 
+nano .config/hypr/hyprpaper.conf 
+ls
+cd .files
+ls
+git pull
+nano fern/.config/hypr/hyprpaper.conf 
+wpaperd
+wpaperctl 
+wpaperctl get-wallpaper 
+wpaperctl get-wallpaper HDMI-0
+wpaperctl get-wallpaper HDMI-1
+wpaperctl get-wallpaper HDMI
+wpaperctl get-wallpaper 1
+wpaperctl get-wallpaper 0
+wpaperctl get-wallpaper -h
+wpaperctl get
+wpaperctl reload
+hyprpaper 
+hyprland-run 
+start-hyprland 
+killall wpaperd 
+hyprpaper 
+nano .config/hypr/hyprpaper.conf 
+nano .config/hypr/hyprland.conf 
+cd .files/
+ls
+nano Makefile 
+ls fern/
+hostnamectl hostname 
+hostnamectl status 
+sudo hostnamectl set-hostname fern
+reboot
+resreload 
+nano /usr/include/hyprland/src/helpers/Splashes.hpp
+nano .config/hypr/hyprland.conf 
+hyprctl reload 
+nano .config/hypr/hyprland.conf 
+pavucontrol 
+find . -name "DarkSoulsII"
+cd ./.local/share/Steam/steamapps/compatdata/335300/pfx/drive_c/users/steamuser/AppData/Roaming/DarkSoulsII
+ls
+cd 0110000109b8a0ac/
+ls
+rm DS2SOFS0000.sl2 
+cp ~/DS2SOFS0000.sl2 .
+systemctl --user status pulseaudio
+systemctl --user start pulseaudio
+systemctl --user start pipewire
+pavucontrol 
+pipewire-pulse 
+pipewire
+systemctl status pipewire
+systemctl --user status pipewire
+systemctl --user status pipewire-puse
+systemctl --user status pipewire-pulse
+spotify-launcher 
+spotify-launcher -h
+spotify-launcher
+nmcli
+nmcli device wifi connect APT402G2. 
+nmcli
+alsamixer 
+pavucontrol 
+sudo pacman -S helvum 
+sudo pacman -R helvum 
+sudo pacman -S pwvucontrol
+paru -S pwvucontrol
+paru -Syy pwvucontrol
+paru -S wiremix
+wiremix 
+alsamixer 
+cd source/
+ls
+killall spotify
+sudo pacman -S spotify
+paru -S spotify
+spotify-launcher 
+spotify-launcher --verbose
+spotify
+spotify-launcher --help
+spotify-launcher youtube.com
+man spotify-launcher
+paru -S spotify
+paru -R spotify-launcher 
+spotify --verbose
+spotify 
+rm -fr .cache/spotify/
+nmcli 
+nmcli device wifi connect APT402G2. 
+nmcli device wifi rescan 
+nmcli device wifi connect APT402G2. 
+nmcli device wifi list 
+nmcli device wifi connect APT402G2. 
+sudo nano /opt/discord/resources/build_info.json 
+alsamixer 
+nmcli device wifi rescan 
+nmcli device wifi list 
+alsamixer 
+nmcli 
+nmcli device wifi connect APT402G2. 
+journalctl 
+nmcli
+cd opensource/
+git clone https://github.com/lwfinger/rtl8192ee.git
+cd rtl8192ee/
+ls
+make all
+sudo pacman -S linux-headers 
+sudo pacman -S linux-firmware
+sudo pacman -S bc
+sudo pacman -S linux-firmware-realtek 
+make all -j8
+find . -name "drv_types.h" 
+nano Makefile 
+ls
+ls core/
+nano Makefile 
+ls
+nano Kconfig 
+nano Makefile 
+make all -j8
+nano Makefile 
+git status 
+git submodule update --init --recursive 
+cat Kbuild | grep "\-I"
+cat Kconfig | grep "\-I"
+nano Kconfig 
+ls
+nano Makefile 
+make all -j8 EXTRA_CFLAGS += -I$(src)/include
+make all -j8 EXTRA_CFLAGS+=-I$$(src)/include
+make all -j8 EXTRA_CFLAGS += -I$$(src)/include
+make all -j8 EXTRA_CFLAGS += -I./include
+make all -j8 EXTRA_CFLAGS+=-I./include
+ls include/
+nmcli
+ip link show
+sudo pacman -S ethtool
+ethtool -i wlp3s0 
+iw phy
+lspci -k | grep -A3 -i "network\|wireless\|wifi"
+cat /etc/modprobe.d/50-blacklist.conf
+cat /etc/modprobe.d/nvidia_drm.conf 
+modinfo $(ethtool -i wlan0 | awk '/driver/{print $2}') | grep filename
+modinfo $(ethtool -i wlp3s0 | awk '/driver/{print $2}') | grep filename
+pacman -Qo $(modinfo $(ethtool -i wlan0 | awk '/driver/{print $2}') | awk '/filename/{print $2}')
+pacman -Qo $(modinfo $(ethtool -i wlp3s0 | awk '/driver/{print $2}') | awk '/filename/{print $2}')
+paru -Ss rtl8192ee
+paru -Ss 8192ee
+paru -Ss etl8
+paru -Ss rtl8
+paru -Ss rtl81
+paru -Ss rtl8192
+nmcli
+pacman -Ql linux-firmware | grep rtl8192ee
+pacman -Ql linux-firmware
+pacman -Qo linux-firmware
+pacman -Q linux-firmware
+pacman -Q; linux-firmware
+pacman -Ql linux-firmware
+make all V=1
+sudo nano /boot/grub/grub.cfg 
+sudo nano /etc/default/grub 
+cd opensource/
+ls
+mv rtl8192ee/ ../source/.
+cc
+cd ..
+cd source/
+cd rtl8192ee/
+ls
+make -j8
+nano core/rtw_mlme.c 
+nano Makefile 
+make -j8
+nano Makefile 
+make -j8
+sudo pacman -S dkms
+sudo dkms build 8192ee/1.1
+sudo make all -j8
+ls -l 
+ls -l include/
+cd projects/
+git clone git@github.com:anthongretter/bMb.git
+cd bMb/
+ls
+make emulation 
+cd bsc/
+ls
+cd thesis/
+ls
+git pull
+find . -name "DarkSoulsIII"
+find .local/ -name "DarkSoulsIII"
+cd .local/share/Steam/steamapps/compatdata/374320/pfx/drive_c/users/steamuser/AppData/Roaming/DarkSoulsIII
+ls
+cd 0110000109b8a0ac/
+ls
+mv ~/DS30000.sl2 .
+cd .local/share/Steam/steamapps/common/DARK\ SOULS\ III/
+ls
+cd Game/
+ls
+mv /tmp/SeamlessCoop .
+mv /tmp/ds3sc_launcher.exe .
+ls
+cd
+cd /tmp/
+unzip DS3\ Seamless\ Co-op\ v0.1.1-1895-0-1-1-1741470313.zip 
+find .local/ -name "DarkSoulsIII"
+cd .local/share/Steam/steamapps/compatdata/374320/pfx/drive_c/users/steamuser/AppData/Roaming/DarkSoulsIII
+ls
+cd 0110000109b8a0ac/
+ls
+rm DS30000.sl2 
+mv /tmp/DS30000.sl2 .
+cd ..
+ls
+cd ..
+find .local/ -name "DarkSoulsIII"
+cd
+find .local/ -name "DarkSoulsIII"
+nano .local/share/Steam/steamapps/common/DARK\ SOULS\ III/Game/SeamlessCoop/ds3sc_settings.ini 
+find .local/ -name "DarkSoulsIII"
+cd .local/share/Steam/steamapps/compatdata/2353199155/pfx/drive_c/users/steamuser/AppData/Roaming/DarkSoulsIII
+ls
+cd 0110000109b8a0ac/
+ls
+rm DS30000.co2 
+mv ~/DS30000.co2 .
+paru -S discrod-screenaudio
+paru -S discord-screenaudio
+sudo nano /opt/discord/resources/build_info.json 
+nmcli
+cd projects/
+git clone git@github.com:anthongretter/bMb.git
+cd bMb/
+git pull
+paru -Ss todoist
+paru -Ss todoist-rs-git
+paru -S todoist-rs-git
+todoist 
+todoist 
+nano .config/.todoist/config.json 
+todoist 
+paru -R todoist-rs-git 
+nano .config/.todoist/config.json 
+rm -fr .config/.todoist/
+ls .config/.
+paru -Ss todoist 
+paru -S todoist-appimage 
+paru -S proton- 
+paru -Ss proton- 
+nmcli dev wifi rescan 
+nmcli dev wifi connect APT402G2. 
+nmcli dev wifi list 
+nmcli device down wlp3s0 
+nmcli device up wlp3s0 
+nmcli
+nmcli device wifi connect APT402G2. 
+nmcli
+nmcli connection delete APT402G2. 
+nmcli device wifi connect APT402G2. --ask
+nmcli device wifi connect APT402G2. 
+nmcli device wifi connect bruh 
+nmcli device wifi connect bruh --ask
+nmcli device wifi connect APT402G2. 
+nmcli connection delete APT402G2. 
+nmcli dev wifi connect APT402G2. --ask
+reboot
+sudo pacman -S xdg-desktop-portal
+sudo pacman -S xdg-desktop-portal-wlr
+cd /tmp
+ls
+mv photo_2024-12-17_11-09-08.pdf ~/documents/id.pdf
+ls documents/
+cd ..
+ls
+cd
+ls
+cd downloads/
+ls
+firefox ../documents/id.pdf 
+nmcli device wifi rescan 
+sudo nano /opt/discord/resources/build_info.json 
+nmcli
+nmcli connection down APT402G2. 
+nmcli
+nmcli device wifi connect APT402G2. 
+steam
+killall steam
+nmcli
+nmcli connection down APT402G2. 
+nmcli 
+nmcli connection up APT402G2. 
+nmcli connection up bruh 
+nmcli
+lspci -knn
+dmesg | grep -i firmware
+sudo dmesg | grep -i firmware
+
+lspci | grep PCI
+lspci -knn
+lsusb
+iw dev
+ip link
+dmesg | grep -i wifi
+sudo dmesg | grep -i wifi
+rfkill list
+sudo rfkill list
+iwlwifi
+lspci | grep -i network
+lspci -tv
+dmesg | grep -i pci
+sudo dmesg | grep -i pci
+lspci | grep -i network
+lspci -knn
+lspci -knn | grep PCI
+nmcli
+lspci -knn
+lsusb
+nmcli
+nmcli device wifi rescan 
+nmcli device wifi 
+nmcli device wifi rescan 
+nmcli device wifi 
+nmcli
+[A
+nmcli
+nano .config/discord/settings.json 
+sudo nano /opt/discord/resources/build_info.json 
+sudo nano /opt/discord/resources/build_info.json \
+sudo nano /opt/discord/resources/build_info.json
+nmcli dev wifi connect APT402G2. 
+nmcli dev wifi connect res
+nmcli dev wifi rescan 
+nmcli dev wifi 
+nmcli dev wifi connect APT402G2. 
+nmcli dev wifi rescan 
+nmcli dev wifi 
+nmcli dev wifi rescan 
+nmcli dev wifi 
+nmcli
+nmcli dev wifi 
+zotero --version
+sudo pacman -S clasp
+sudo pacman -Ss clasp
+paru -Ss clasp
+paru -Ss nodejs-google-clasp
+paru -S nodejs-google-clasp
+npm install -g @google/clasp
+sudo npm install -g @google/clasp
+clasp -h
+clasp login
+cd projects/
+ls
+mkdir docsgit
+cd docsgit/
+ls
+clasp create --type docs --title "Docs as Git"
+ls
+nano appsscript.json 
+clasp push
+ls Zotero/
+nmcli
+zotero --help
+nano .zotero/zotero/profiles.ini 
+nano .zotero/zotero/9o5g9m2a.default/prefs.js 
+nano .zotero/zotero/9o5g9m2a.default/session
+nano .zotero/zotero/9o5g9m2a.default/session.json 
+nano .zotero/zotero/9o5g9m2a.default/prefs.js 
+nano .zotero/zotero/9o5g9m2a.default/retractions.json 
+nano .zotero/zotero/9o5g9m2a.default/treePrefs.json 
+nano .zotero/zotero/9o5g9m2a.default/extensions.json 
+nano .zotero/zotero/9o5g9m2a.default/compatibility.ini 
+nano .zotero/zotero/9o5g9m2a.default/times.json 
+nmcli device wifi rescan 
+nmcli device wifi connect bruh 
+nmcli dev wifi rescan 
+nmcli dev wifi connect bruh 
+rm -fr .cache/mozilla/
+alsamixer 
+feh pictures/*
+alsamixer 
+nmcli
+nmcli dev wifi rescan q
+nmcli dev wifi rescan 
+nmcli dev wifi
+nmcli dev wifi rescan 
+nmcli dev wifi
+nmcli dev wifi rescan 
+nmcli dev wifi
+watch `nmcli dev wifi`
+watch nmcli dev wifi
+alsamixer 
+alsamixer
+alsamixer 
+cd /lib/modules/6.18.7-arch1-1/build/
+ls
+nano Makefile 
+killall steam
+steam
+make
+make clean 
+ls /lib/modules
+ls /lib/modules/6.18.7-arch1-1/
+cd /lib/modules/6.18.7-arch1-1/build/
+ls
+lsd
+ls
+nano Kconfig 
+intercept-build make
+sudo intercept-build make
+cat /lib/modules/6.18.7-arch1-1/build/arch/Kconfig 
+sudo pacman -S bear
+sudo pacman -Syy bear
+nmcli
+sudo pacman -S bash-completion 
+sudo pacman -Syy bash-completion 
+cat /tmp/Exported\ Items.bib 
+paru -S anytype
+anytype
+anytype-bin
+anytype-alpha-bin
+paru -S anytype
+find -h
+find --help
+find . -name "*anytype*" -f exec
+find . -name "*anytype*" -D exec
+find . -name "*anytype*" -type exec
+find . -name "*anytype*" -type f -executable
+find .local -name "*anytype*" -type f -executable
+find .local -name "*anytype*"
+find .local -name "*Anytype*"
+find .local -name "*AnyType*"
+find .local -name "*Any*"
+find .local -name "*any*"
+find .local -name "*anyty*"
+find .local -name "*anytype*"
+find -D help
+cd bsc/
+ls
+cd thesis/
+ls
+cd experiments/
+ls
+cd replication/
+ls
+feh performance_comparison.png 
+paru -S anytype 
+find / -name "*anytype*"
+nano /usr/share/applications/anytype.desktop 
+cp /usr/share/applications/anytype.desktop desktop/. 
+ls desktop/
+chmod +x desktop/anytype.desktop 
+ls desktop/
+./desktop/anytype.desktop 
+nano desktop/anytype.desktop 
+/opt/Anytype/anytype --ozone-platform-hint=auto %U
+sudo pacman -S linux-headers 
+make clean
+sudo make clean
+make clean
+sudo make clean
+grep "^CONFIG_ARM" /lib/modules/$(uname -r)/build/.config
+cat /lib/modules/$(uname -r)/build/.config
+sudo nano /lib/modules/$(uname -r)/build/.config
+make
+sudo make
+sudo nano /lib/modules/$(uname -r)/build/.config
+sudo make
+make
+
+make
+make
+df -h
+pacman -Q linux linux-headers
+sudo pacman -Syyu
+sudo cat /dev/hidraw1 | hexdump -C
+alsamixer 
+amixer -c 0 cinfo numid=10
+alsamui
+alsamixer 
+aplay -l
+alsamixer 
+make clean
+git add .
+git status 
+git add .
+git restore --staged .idea/
+git add .
+git status 
+git restore --staged .idea/*
+git status 
+git restore --staged .idea/
+git status 
+git add .
+git status 
+git restore --staged .idea/
+git status 
+git commit --amend 
+git --global config core.editor nano
+git config --global core.editor nano
+git commit --amend 
+git push -f
+git remote -v
+git remote set-url origin git@github.com:anthongretter/hid-driver-fuxi.git
+git push -f
+git status 
+git rm .idea/
+git rm -r .idea/
+git rm -rf .idea/
+git status 
+git commit --amend 
+git push -f
+git status 
+sudo pacman -S hid-tools 
+sudo hid-recorder /dev/hidraw1
+sudo hid-recorder --list
+sudo hid-recorder --help
+sudo hid-recorder 
+ls .ssh/
+nano .ssh/config 
+rm -fr .ssh/known_hosts
+nano .ssh/config 
+nano .ssh/known_hosts.old 
+nmcli
+nmcli con down APT402G2. 
+nmcli
+mv /tmp/All\ in\ one\ \(all\ game\ versions\)-32444-11-1770897704.zip /tmp/Skyrim\ Together\ Reborn-69993-1-8-0-1762551509.zip /tmp/Vortex-1-1-16-7-1773764130.exe .
+ls
+cd ..
+ls
+pwd
+unzip Skyrim\ Together\ Reborn-69993-1-8-0-1762551509.zip 
+ls
+cd SkyrimTogetherReborn
+ls
+cd ..
+ls
+rm -fr Skyrim*
+ls
+mv /tmp/Skyrim\ Together\ Reborn-69993-1-8-0-1762551509.zip .
+ls
+winecfg 
+ls .local/share/Steam/
+cd .local/share/Steam/
+ls
+cd steamapps/
+ls
+cd common/
+ls
+cd Proton\ Hotfix/
+ls
+cd ..
+cd Skyrim\ Special\ Edition/
+ls
+cd ..
+mkdir SSETogether
+cd SSETogether/
+mv ~/Skyrim\ Together\ Reborn-69993-1-8-0-1762551509.zip .
+ls
+unzip Skyrim\ Together\ Reborn-69993-1-8-0-1762551509.zip 
+LS
+ls
+cd
+ls
+mv All\ in\ one\ \(all\ game\ versions\)-32444-11-1770897704.zip .local/share/Steam/steamapps/common/Skyrim\ Special\ Edition/Data/.
+cd search/
+ls
+feh *
+cd ..
+cd pictures/
+feh nice.png 
+cd .local/share/Steam/
+ls
+cd steamapps/
+ls
+cd common/
+ls
+cd Skyrim\ Special\ Edition/
+ls
+mv ../SSETogether/Skyrim\ Together\ Reborn-69993-1-8-0-1762551509.zip Data/.
+ls
+cd Data/
+ls
+unzip Skyrim\ Together\ Reborn-69993-1-8-0-1762551509.zip 
+ls
+unzip All\ in\ one\ \(all\ game\ versions\)-32444-11-1770897704.zip 
+mv SKSE/Plugins/ .
+ls
+ls Plugins/
+ls
+cd ..
+ls
+ln -s SkyrimSE.exe ~/desktop/.
+ls ~/desktop/
+sudo pacman -S protontricks 
+protontricks 489830 wimecfg
+protontricks 489830 winecfg
+ls
+cd Data/
+ls
+mv Plugins/ SKSE/.
+paru -Ss vortex
+paru -S vortex-git
+paru -S vortex
+protontricks 489830 
+protontricks 489830 winecfg
+alsamixer 
+nmcli
+alsamixer 
+cd bsc/
+ls
+cd thesis/
+ls
+cd tools/
+ls
+cd
+cd opensource/
+ls
+cd ..
+cd source/
+ls
+cd ..
+cd bsc/thesis/
+ls
+nano Setup.mk 
+alsamixer 
+cd pictures/
+;s
+ls
+ls -a
+feh *
+mv /tmp/FormularioRatificacaoTCC.pdf /tmp/tcc-anthon-tcc2-rat.pdf
+mv /tmp/tcc-anthon-tcc2-rat.pdf /tmp/tcc-anthon-tcc2.1-rat.pdf
+alsamixer 
+sudo dmesg | grep -i hid 
+sudo dmesg | grep -i Fuxi 
+pkg-config --cflags alsa
+alsamixer 
+wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+ps
+ps -a
+sudo dmesg | grep -i Shan 
+hyprctl clients 
+hyprctl clients | grep steam
+hyprctl clients | grep -i steam
+hyprctl clients | grep -i stellaris
+upower -e
+ls /sys/class/power_supply/
+evtest
+dmesg | grep -i battery
+sudo dmesg | grep -i battery
+lsusb
+sudo usbhid-dump -d 040b:0897
+sudo usbhid-dump -d 040b:0897 | hid-decode 
+cd projects/hid-fuxi
+ls
+cd ..
+cd hid-fuxih3/
+ls
+ls /dev/hidraw*
+lsusb
+cat /dev/hidraw0
+sudo cat /dev/hidraw0
+udevadm info -q all
+udevadm info -q all Weltrend Semiconductor Fuxi-H3
+udevadm info -q all "Weltrend Semiconductor Fuxi-H3"
+udevadm info -q all "040b:0897"
+udevadm info -q all 040b:0897
+sudo dmesg | grep -i Fuxi 
+hid-decode /dev/hidraw2
+nano ~/.bash_history 
+sudo cat /dev/hidraw2 | hexdump -C
+nano ~/.bash_history 
+sudo hid-recorder /dev/hidraw2
+alsamixer 
+ls
+pwd
+cat /tmp/Estatística.bibtex 
+cat /tmp/Estatística.bibtex | wl-copy 
+opt --version
+cd bsc/thesis/tools/
+ls
+./opt --version
+./opt -O3 -print-passes ../sandbox/dumpasn1.ll
+cat ../sandbox/o3-passes.txt 
+nano ../sandbox/o3-passes.txt 
+./opt -print-passes
+nano ../sandbox/o3-passes.txt 
+cd source/
+ls
+cd llvm-project-llvmorg-20.1.8/
+ls
+cd
+cd bsc/thesis/tools/
+ls
+./opt -print-pipeline -O3
+./opt -O3 -print-pipeline
+./opt -O3 -print-pipeline-passes
+./opt -O3 -print-pipeline-passes /dev/null
+cd bsc/thesis/
+;s
+l;s
+l
+cd tools/
+lsl
+nano ../sandbox/o3-passes-simplified.txt
+alsamixer 
+nmcli
+nmcli dev wifi connect APT402G2. 
+alsamu
+alsamixer 
+sudo nano /opt/discord/resources/build_info.json
+alsamixer 
+nmcli
+alsamixer 
+nmcli device wifi 
+nmcli device wifi rescan 
+nmcli device wifi 
+nmcli
+nmcli dev wifi connect APT402G2. 
+systemctl restart NetworkManager
+nmcli dev wifi connect APT402G2. 
+nmcli con up APT402G2. 
+nmcli con delete APT402G2. 
+nmcli dev wifi connect APT402G2. --ask
+alsamixer 
+nmcli
+nmcli connection down APT402G2. 
+nmcli
+nmcli c up APT402G2. 
+nmcli
+nmcli dev wifi 
+nmcli dev wifi connect APT402G2. 
+nmcli
+sudo pacman -Ss music
+paru -Ss youtube music
+ls /tmp/
+ls pictures/
+feh pictures/*
+lsblk
+df -h
+lsblk
+df -h
+sudo dmesg | grep -i SATA
+sudo dmesg | grep -i sata
+sudo dmesg | grep -i /dev/sda
+sudo dmesg | grep -i /dev/sd
+sudo dmesg | grep -i /dev/s
+sudo dmesg | grep -i /dev/
+lsblk
+nmcli
+nmcli c down APT402G2. 
+feh pictures/*
+alsamixer 
+nmcli c down APT402G2. 
+nmcli
+pavucontrol 
+nmcli c up APT402G2. 
+alsamixer 
+nmcli
+nmcli c down Ap
+nmcli c down APT402G2. 
+alsamixer 
+nmcli
+nmcli c down APT402G2. 
+nmcli
+nmcli dev wifi connect APT402G2. 
+nmcli
+ls
+cd .config/unity3d/IronGate/Valheim/
+ls
+cd worlds
+ls
+ls -l
+chmod 777 tenis.*
+ls -l
+chmod +x tenis.*
+ls -l
+nmcli
+systemctl restart logmein-hamachi.service 
+hamachi lis
+hamachi list
+hamachi login
+hamachi list
+hamachi
+sudo pacman -Ss hamachi
+paru -Ss hamachi
+paru -S logmein-hamachi
+hamachi 
+systemctl start logmein-hamachi.service 
+hamachi 
+sudo nano /var/lib/logmein-hamachi/h2-engine.cfg
+sudo nano /var/lib/logmein-hamachi/h2-engine-override.cfg
+systemctl restart logmein-hamachi.service 
+hamachi 
+hamachi --help
+hamachi login
+hamachi 
+hamachi create "eu maam todos os leel" lulagay
+hamachi 
+hamachi list
+alsamixer 
+hamachi 
+systemctl start logmein-hamachi.service 
+hamachi 
+hamachi list
+./start_server.sh 
+nmclii
+nmcli
+nano start_server.sh 
+./start_server.sh 
+nmcli c down APT402G2. 
+nmcli
+nmcli c up APT402G2. 
+nmcli
+nmcli dev wifi 
+nmcli
+nmcli c d APT402G2. 
+nmli
+nmlci
+nmcli
+nano .config/waybar/config.old 
+nano .config/waybar/config
+nano -F .config/waybar/config
+nmcli
+nano .config/waybar/config
+killall waybar 
+waybar 
+nano .config/waybar/config
+waybar 
+killall waybar 
+waybar -l debug
+zeditor .config/waybar/config
+killall waybar 
+nmcli
+killall waybar 
+waybar 
+nmcli c up APT402G2. 
+alsamixer 
+nmcli c d APT402G2. 
+cd .local/share/Steam/steamapps/common/Valheim\ dedicated\ server/
+ls
+./start_server.sh 
+nmcli c d APT402G2. 
+nmcli c up APT402G2. 
+nmcli c d APT402G2. 
+nmcli c up APT402G2.
+htop
+nmcli dev wifi 
+nmcli c d APT402G2. 
+cd .local/share/Steam/steamapps/common/Valheim\ dedicated\ server/
+./start_server.sh 
+ls /tmp
+ls
+ls /tmp
+nmcli c d APT402G2. 
+nmcli c u APT402G2. 
+nmcli c d APT402G2. 
+cd .local/share/Steam/steamapps/common/Valheim\ dedicated\ server/
+./start_server.sh 
+cd .local/share/Steam/steamapps/common/Valheim\ dedicated\ server/
+./start_server.sh 
+alsamixer \
+pwd
+ls ..
+ls
+cd ..
+ls
+cd thesis/
+ls
+cd ..
+nmcli 
+nmcli c d APT402G2. 
+nmcli c up APT402G2. 
+nmcli
+nmcli c delete APT402G2. 
+nmcli 
+nmcli dev wifi connect APT402G2. 
+nmcli dev wifi connect APT402G2. --ask
+nmcli
+nmcli dev wifi 
+nmcli
+nmcli dev wifi connect APT402G2. 
+nmcli
+nmcli c d APT402G2. 
+cd .local/share/Steam/steamapps/common/Valheim\ dedicated\ server/
+./start_server.sh 
+nmcli c d APT402G2. 
+nmcli c u APT402G2. 
+cd .local/share/Steam/steamapps/common/Valheim\ dedicated\ server/
+./start_server.sh 
+nmcli c u APT402G2. 
+nmcli c d APT402G2. 
+cd .local/share/Steam/steamapps/common/Valheim\ dedicated\ server/
+./start_server.sh 
+cd .local/share/Steam/steamapps/common/Valheim\ dedicated\ server/
+ls
+nano start_server.sh 
+scp -h
+scp tenis.db tenis.fwl admin@128.168.0.24:/home/admin/Servers/valheim/
+scp tenis.db tenis.fwl admin@12892.168.0.24:/home/admin/Servers/valheim/
+scp tenis.db tenis.fwl admin@192.168.0.24:/home/admin/Servers/valheim/
+ls
+firefox Valheim\ Dedicated\ Server\ Manual.pdf 
+scp tenis.db tenis.fwl admin@192.168.0.24:/home/admin/Servers/valheim/
+./start_server.sh 
+scp tenis.db tenis.fwl admin@192.168.0.24:/home/admin/Servers/valheim/
+ls -l
+./start_server.sh 
+ssh admin@192.168.0.24
+ssh admin@192.168.0.24
+ip addr
+ls
+cd .local/share/Steam/steamapps/common/Valheim\ dedicated\ server/
+ls
+l
+ls
+ls -l
+cd
+cd .config/unity3d/IronGate/Valheim/worlds_local/
+ls
+ls -l
+scp tenis.db tenis.fwl admin@192.168.0.24:/home/admin/.config/unity3d/IronGate/Valheim/worlds_local/
+ssh admin@192.168.0.24
+sudo pacman -S pass
+pass
+pass init 
+gpg 
+gpg --full-generate-key 
+pass init "anthon.png@proton.me"
+pass insert vpn/ufsc
+sudo pacman -S pass-secret-service
+sudo pacman -Ss pass-secret-service
+sudo pacman -S strongswan strongswan-libcharon strongswan-starter strongswan-nm strongswan-charon strongswan-swanctl strongswan-pki libcharon-extra-plugins libcharon-extauth-plugins
+sudo pacman -Ss strongswan
+sudo pacman -S networkmanager-strongswan strongswan
+sudo pacman -Ss libcharon
+nmcli
+systemctl restart NetworkManager
+sudo nano /etc/ipsec.conf 
+nmcli connection add -h
+nmcli connection add type vpn vpn-type strongswan connection.id "ufsc"
+nmcli connection edit ufsc 
+nmcli connection modify ufsc vpn.secrets "password=A1n6t5h6o9n6" 
+nmcli connection edit ufsc 
+nmcli c up ufsc 
+nmcli connection up ufsc passwd-file <(echo "vpn.secrets.password:$(pass show vpn/ufsc)")
+cat .config/waybar/config
+nmcli
+ip addr
+nano .config/waybar/config
+killall waybar 
+nano .config/waybar/config
+killall waybar 
+nano .config/waybar/config
+killall waybar 
+nano .config/waybar/style.css
+killall waybar 
+cat .config/waybar/config | wl-copy 
+nano .config/waybar/config
+killall waybar 
+nano .config/waybar/config
+paru -S scrollmpris-git
+killall waybar 
+waybar 
+nano .config/waybar/config
+killall waybar 
+nano .config/waybar/config
+killall waybar 
+waybar 
+nano .config/waybar/config
+waybar 
+nano .config/waybar/config
+nano .config/waybar/style.css
+killall waybar 
+nano .config/waybar/style.css
+killall waybar 
+nmcli c d ufsc
+nmcli c d APT402G2. 
+paru -S protonvpn
+paru -Ss protonvpn
+nmcli c u APT402G2. 
+nmcli
+nano .config/waybar/style.css
+killall waybar 
+nano .config/waybar/style.css
+nmcli c d APT402G2. 
+nmcli c u APT402G2. 
+nmcli c up ufsc 
+nmcli c up ufsc --ask
+nmcli
+cd /tmp
+ls
+unzip ScienceDirect_articles_03May2026_21-19-32.642.zip 
+nmcli c d APT402G2. 
+ufsc
+ssh admin@192.168.0.24
+ls
+mv ChatGPT\ Image\ May\ 4\,\ 2026\,\ 12_56_52\ PM.png render.png
+killall waybar 
+ScrollMPRIS --help
+killall waybar 
+waybar 
+killall waybar 
+nano .config/waybar/style.css
+ScrollMPRIS --help
+killall waybar 
+alsamixer 
+nano .config/waybar/config
+ssh admin@192.168.0.24
+claude
+curl -fsSL https://claude.ai/install.sh | bash
+cd bsc/thesis/
+ls
+cd ..
+ls
+rm Introduction\ To\ The\ Theory\ Of\ Computation\ -\ Michael\ Sipser.djvu 
+mkdir maceta.old
+mv maceta/lib maceta/include maceta/Makefile maceta/src maceta.old/.
+sudo pacman -S rust
+sudo pacman -S rustup

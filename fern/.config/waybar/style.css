@@ -12,7 +12,11 @@ window#waybar {
     color: #ffffff;
 }
 
-#workspaces {
+#workspaces,
+#custom-mpris,
+#custom-mpris.playing,
+#custom-mpris.paused {
+
     border: 1px solid #333331;
     border-radius: 5px;
 
@@ -63,6 +67,7 @@ window#waybar {
     color: #eeeeee;
 }
 
+#wireplumber,
 #cpu,
 #memory,
 #battery,
@@ -84,6 +89,10 @@ window#waybar {
 
     padding-left: 8px;
     padding-right: 8px;
+}
+
+#network {
+	color: #00AF54
 }
 /*
 #battery {
