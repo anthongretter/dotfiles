@@ -1,0 +1,14 @@
+{
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "s",
+    ): ToggleSticky,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Return",
+    ): Spawn("kitty"),
+}

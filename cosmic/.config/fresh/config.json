@@ -1,0 +1,171 @@
+{
+  "version": 2,
+  "theme": "builtin://gruvbox",
+  "lsp": {
+    "python": {
+      "enabled": true,
+      "auto_start": true,
+      "process_limits": {
+        "max_memory_percent": 50,
+        "max_cpu_percent": 90,
+        "enabled": true
+      }
+    },
+    "bash": {
+      "enabled": true,
+      "auto_start": true,
+      "process_limits": {
+        "max_memory_percent": 50,
+        "max_cpu_percent": 90,
+        "enabled": true
+      }
+    },
+    "cmake": {
+      "command": "neocmakelsp",
+      "enabled": true,
+      "args": [
+        "stdio"
+      ],
+      "auto_start": true,
+      "root_markers": [
+        "CmakeLists.txt",
+        ".git"
+      ],
+      "process_limits": {
+        "max_memory_percent": 50,
+        "max_cpu_percent": 90,
+        "enabled": true
+      }
+    },
+    "rust": {
+      "enabled": true,
+      "auto_start": true,
+      "process_limits": {
+        "max_memory_percent": 50,
+        "max_cpu_percent": 90,
+        "enabled": true
+      }
+    },
+    "cpp": {
+      "enabled": true,
+      "auto_start": true,
+      "args": [
+        "--background-index",
+        "-j=1",
+        "--pch-storage=memory"
+      ],
+      "process_limits": {
+        "max_memory_percent": 50,
+        "max_cpu_percent": 90,
+        "enabled": true
+      }
+    }
+  },
+  "plugins": {
+    "vi_mode": {
+      "enabled": true,
+      "settings": {
+        "autoStart": false,
+        "arrowKeys": true,
+        "searchWordUnderCursor": true
+      }
+    },
+    "welcome_screen": {
+      "enabled": true,
+      "settings": {
+        "showOnStartup": true
+      }
+    },
+    "orchestrator": {
+      "enabled": true,
+      "settings": {
+        "autoOpenDock": "always",
+        "defaultView": "compact",
+        "showAllWorktrees": false,
+        "showEmptyWorkspaces": true,
+        "notifySound": true
+      }
+    },
+    "dashboard": {
+      "settings": {
+        "autoOpen": true
+      },
+      "enabled": true
+    },
+    "live_sessions": {
+      "settings": {
+        "claudeCloud": false
+      }
+    }
+  },
+  "keybindings": [
+    {
+      "key": "Right",
+      "modifiers": ["alt"],
+      "action": "next_window"
+    },
+    {
+      "key": "Left",
+      "modifiers": ["alt"],
+      "action": "prev_window"
+    },
+    {
+      "key": "Enter",
+      "modifiers": ["alt"],
+      "action": "open_terminal_below"
+    },
+    {
+      "key": "Down",
+      "modifiers": ["alt"],
+      "action": "focus_terminal"
+    },
+    {
+      "key": "g",
+      "modifiers": ["ctrl"],
+      "action": "show_git_blame"
+    },
+    {
+      "key": "o",
+      "modifiers": ["ctrl"],
+      "action": "orchestrator_open"
+    },
+    {
+      "key": "F1",
+      "action": "orchestrator_run_agent"
+    },
+    {
+      "key": "F2",
+      "action": "orchestrator_dock_toggle"
+    },
+    {
+      "key": "F3",
+      "action": "orchestrator_jump"
+    },
+    {
+      "key": "F3",
+      "modifiers": ["shift"],
+      "action": "orchestrator_jump_back"
+    },
+    {
+      "key": "n",
+      "modifiers": ["alt"],
+      "action": "orchestrator_new"
+    }
+  ],
+  "file_explorer": {
+    "show_hidden": true,
+    "side": "right"
+  },
+  "editor": {
+    "show_vertical_scrollbar": false,
+    "cursor_jump_animation": false,
+    "animations": true,
+    "enable_inlay_hints": false,
+    "completion_popup_auto_show": true,
+    "auto_save_enabled": true,
+    "screensaver_enabled": true
+  },
+  "file_browser": {
+    "show_hidden": true
+  }
+}
