@@ -5,8 +5,7 @@
 //! (all optional): `--width/--height/--cell-w/--cell-h/--fps`, `--loop SECS`,
 //! `--rate WORDS_PER_SEC`, `--no-words`, `--no-bubbles`, `--amp SCALE`, `--chop SCALE`,
 //! colours as `#rrggbb`: `--sky --sea --deep --crest --foam --bubble
-//! --ripple-hi --ripple-lo`, the ship: `--ship [--ship-x FRAC]
-//! [--ship-scale PX] [--ship-laps N]`, and `--at SECS` to emit the single
+//! --ripple-hi --ripple-lo`, the ship: `--ship [--ship-x FRAC] [--ship-laps N]`, and `--at SECS` to emit the single
 //! frame at that timeline time instead of the whole video.
 
 mod wave;
@@ -54,7 +53,6 @@ fn parse_args() -> (Cfg, Option<f32>) {
                     "--ripple-hi" => c.ripple_hi = rgb(v),
                     "--ripple-lo" => c.ripple_lo = rgb(v),
                     "--ship-x" => c.ship_x = v.parse().unwrap(),
-                    "--ship-scale" => c.ship_scale = v.parse().unwrap(),
                     "--ship-laps" => c.ship_laps = v.parse().unwrap(),
                     "--at" => at = Some(v.parse().unwrap()),
                     other => panic!("unknown arg {other}"),

@@ -27,6 +27,9 @@ make install-cosmic   # stow the dotfiles into $HOME
 make setup-cosmic     # deps, mpvpaper, patched locker, video, service (asks for sudo)
 ```
 
+`setup-cosmic` works on Fedora (dnf) and Arch (pacman); it picks the package
+manager it finds.
+
 Then log out and back in.
 
 ## Keep it up to date
@@ -72,7 +75,7 @@ to "Default Dark Modern", so they are inert under Gruvbox).
 `install.sh` clones `pop-os/cosmic-greeter`, checks out the tag matching the
 installed `cosmic-greeter` package (`epoch-<version>`), applies the patch,
 and installs the build to `/usr/local/bin/cosmic-greeter`. cosmic-session
-finds it there before `/usr/bin`, so a Fedora update never overwrites it —
+finds it there before `/usr/bin`, so a system update never overwrites it —
 but after a COSMIC upgrade, run `make setup-cosmic` again so the locker
 matches the new version.
 

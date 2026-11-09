@@ -38,12 +38,10 @@ pub struct Cfg {
     pub bubble: (u8, u8, u8),
     pub ripple_hi: (u8, u8, u8),
     pub ripple_lo: (u8, u8, u8),
-    /// Float a pixel-art pirate ship on the water.
+    /// Float a pirate ship, drawn in characters, on the water.
     pub ship: bool,
     /// Ship centre as a fraction of the width.
     pub ship_x: f32,
-    /// Screen pixels per sprite pixel.
-    pub ship_scale: usize,
     /// Whole screen crossings per loop (0 = stays put, negative = leftwards).
     pub ship_laps: i32,
 }
@@ -72,7 +70,6 @@ impl Default for Cfg {
             ripple_lo: (40, 120, 190),
             ship: false,
             ship_x: 0.5,
-            ship_scale: 5,
             ship_laps: 0,
         }
     }
@@ -325,9 +322,13 @@ impl Raster {
         let paths = [
             format!("{home}/.local/share/fonts/JetBrainsMono/JetBrainsMono-Regular.ttf"),
             "/usr/share/fonts/jetbrains-mono-fonts/JetBrainsMono-Regular.ttf".into(),
+            "/usr/share/fonts/TTF/JetBrainsMono-Regular.ttf".into(), // Arch
             "/usr/share/fonts/adwaita-mono-fonts/AdwaitaMono-Regular.ttf".into(),
             "/usr/share/fonts/liberation-mono-fonts/LiberationMono-Regular.ttf".into(),
             "/usr/share/fonts/dejavu-sans-fonts/DejaVuSans.ttf".into(),
+            "/usr/share/fonts/Adwaita/AdwaitaMono-Regular.ttf".into(),
+            "/usr/share/fonts/liberation/LiberationMono-Regular.ttf".into(),
+            "/usr/share/fonts/TTF/DejaVuSans.ttf".into(),
         ];
         let fonts: Vec<_> = paths
             .iter()
@@ -379,6 +380,51 @@ impl Raster {
                 }
                 let o = (py as usize * w + px as usize) * 4;
                 let c = lerp_rgb((frame[o], frame[o + 1], frame[o + 2]), cell.fg, a);
+                frame[o..o + 3].copy_from_slice(&[c.0, c.1, c.2]);
+            }
+        }
+    }
+    /// One character with its top-left cell corner at pixel (x, y), off the
+    /// grid. `bg` fills the cell first.
+    #[allow(clippy::too_many_arguments)]
+    fn blit(
+        &mut self,
+        frame: &mut [u8],
+        w: usize,
+        h: usize,
+        x: i32,
+        y: i32,
+        ch: char,
+        fg: (u8, u8, u8),
+        bg: Option<(u8, u8, u8)>,
+    ) {
+        let inside = |px: i32, py: i32| px >= 0 && py >= 0 && (px as usize) < w && (py as usize) < h;
+        if let Some(bg) = bg {
+            for py in y..y + self.cell_h as i32 {
+                for px in x..x + self.cell_w as i32 {
+                    if inside(px, py) {
+                        let o = (py as usize * w + px as usize) * 4;
+                        frame[o..o + 3].copy_from_slice(&[bg.0, bg.1, bg.2]);
+                    }
+                }
+            }
+        }
+        if ch == ' ' {
+            return;
+        }
+        let (cw, ascent) = (self.cell_w as i32, self.ascent);
+        let (m, bmp) = self.glyph(ch);
+        let gx = x + (cw - m.width as i32) / 2;
+        let gy = y + (ascent - m.height as f32 - m.ymin as f32).round() as i32;
+        for iy in 0..m.height {
+            for ix in 0..m.width {
+                let a = bmp[iy * m.width + ix] as f32 / 255.0;
+                let (px, py) = (gx + ix as i32, gy + iy as i32);
+                if a == 0.0 || !inside(px, py) {
+                    continue;
+                }
+                let o = (py as usize * w + px as usize) * 4;
+                let c = lerp_rgb((frame[o], frame[o + 1], frame[o + 2]), fg, a);
                 frame[o..o + 3].copy_from_slice(&[c.0, c.1, c.2]);
             }
         }
@@ -560,9 +606,9 @@ impl WaveRenderer {
             }
         }
         if let Some(ship) = &self.ship {
-            // The ship is drawn in pixels over the cell grid, so every cell
-            // it may have touched is re-rasterised next frame.
-            let (x0, y0, x1, y1) = ship.draw(&mut self.frame, &self.c, &self.surf, t);
+            // Drawn in pixels over the grid, so every cell it touched is
+            // re-rasterised next frame.
+            let (x0, y0, x1, y1) = ship.draw(&mut self.frame, &mut self.raster, &self.c, t);
             for cy in y0 / self.c.cell_h..y1.div_ceil(self.c.cell_h).min(rows) {
                 for cx in x0 / self.c.cell_w..x1.div_ceil(self.c.cell_w).min(cols) {
                     self.prev[cy * cols + cx] = None;
@@ -575,97 +621,43 @@ impl WaveRenderer {
 
 
 // ---- pirate ship --------------------------------------------------------------
-/// Galleon sprite, bow to the right. One char per sprite pixel, see
-/// `ship_rgb` for the palette; '.' is transparent.
-const SHIP_W: usize = 68;
-const SHIP_H: usize = 60;
-#[rustfmt::skip]
-const SHIP: [&str; SHIP_H] = [
-    ".............................mmFFFFFFFFFFF..........................",
-    ".............................mmFFFWWWWWFFF..........................",
-    ".............................mmFFWWWWWWWFF..........................",
-    ".............................mmFFWFWWWFWFF..........................",
-    ".............................mmFFWWWFWWWFF..........................",
-    ".............................mmFFFWWWWWFFF..........................",
-    ".............................mmFFFWFWFWFFF..........................",
-    ".............................mmFFFFFFFFFFF..........................",
-    ".......................mmmmmmmmmmmmm................................",
-    "........................ssSSSSSSSSS.................................",
-    "..........................ssSSSsSSSSS...............................",
-    "..........................ssSSSSSSSSS........mmk....................",
-    "..........................sssssssssss........mm.kk..................",
-    "........................sssssssssss.....mmmmmmmmmmkk................",
-    ".............................mm..........ssSSSSSSSS.kk..............",
-    "............mm.......mmmmmmmmmmmmmmmmm....ssSSSsSSSS..kk............",
-    "............mm........ssSSSSSSSSSSSSS......ssSSSSSSSS...k...........",
-    "............mm.........ssSSSsSSSSsSSSS.....ssSSSsSSSS...............",
-    ".....mmmmmmmmmmmmmm.....ssSSSSSSSSSSSSS...ssssssssss................",
-    "......ssSSSSSSSSSS......ssSSSsSSSSsSSSS..ssssssssss......ss.........",
-    ".......ssSSSsSSSSsS.....ssSSSSSSSSSSSSS......mm..........ss.........",
-    "........ssSSSSSSSSSS....ssSSSsSSSSsSSSSmmmmmmmmmmmmmm....sSs........",
-    "........ssSSSsSSSSsS....ssSSSSSSSSSSSSS.ssSSSSSSSSSS.....sSs........",
-    "........ssSSSSSSSSSS....ssSSSsSSSSsSSSS..ssSSSsSSSSsS....sSSs.......",
-    "........ssSSSsSSSSsS...sssssssssssssss....ssSSSSSSSSSS...sSSs.......",
-    ".......ssssssssssss...sssssssssssssss.....ssSSSsSSSSsS...sSSSs......",
-    "......ssssssssssss...........mm...........ssSSSSSSSSSS...sSSSs......",
-    "...........kmm.....mmmmmmmmmmmmmmmmmmmmm..ssSSSsSSSSsS...sSSSSs.....",
-    "....mmmmmmkmmmmmmmmmssSSSSSSSSSSSSSSSSS...ssSSSSSSSSSS...sSSSSs.....",
-    ".....ssSSkSSSSSSSSS..ssSSSsSSSSsSSSSsSSS..ssSSSsSSSSsS...sSSSSSs....",
-    "......sskSSsSSSSsSSS.ssSSSSSSSSSSSSSSSSS.ssssssssssss....sSSSSSs....",
-    ".......ksSSSSSSSSSSSS.ssSSSsSSSSsSSSSsSSssssssssssss.....sSSSSSSs...",
-    "......kssSSSsSSSSsSSS.ssSSSSSSSSSSSSSSSSS....mm..........sSSSSSSs...",
-    "......kssSSSSSSSSSSSS.ssSSSsSSSSsSSSSsSmmmmmmmmmmmmmmm...sSSSSSSSs..",
-    ".....k.ssSSSsSSSSsSSS.ssSSSSSSSSSSSSSSSSssSSSSSSSSSSS....sSSSSSSSs..",
-    ".Y..k.ssssssssssssss..ssSSSsSSSSsSSSSsSSSssSSSsSSSSsSS...ssssssssss.",
-    ".m.k.ssssssssssssss...ssSSSSSSSSSSSSSSSSS.ssSSSSSSSSSSS..ssssssssssm",
-    ".wkw.w.w.w.wmw........ssSSSsSSSSsSSSSsSSS.ssSSSsSSSSsSS..........mmm",
-    "...wwwwwwwwwwww......ssSSSSSSSSSSSSSSSSS..ssSSSSSSSSSSS........mmmm.",
-    "..wbbbbbbbbbbbb......sssssssssssssssssss.sssssssssssss........mmm...",
-    ".wbGGGGGGGGGGGG.....sssssssssssssssssss.sssssssssssss.......mmm.....",
-    ".bGbbbbbbbbbbbbwwwwww.......kmmk.............mm...........mmm.......",
-    ".GbbYYbbYYbbYYbbbbbbb....kkk.mm.kkk.........wmw.w.w.w.w.mmmm........",
-    ".bbbYYbbYYbbYYbGGGGGG...k....mm....k.......wwwwwwwwwwwwwmmG.........",
-    ".bbbbbbbbbbbbbbbbbbbb.kk.....mm.....kk.....bbbbbbbbbbbbb.GG.........",
-    ".bbbbbbbbbbbbbbbbbbbbwwwwwwwwwwwwwwwwwwwwwwGGGGGGGGGGGGG............",
-    ".bbbbYYbbbYYbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb.............",
-    ".bbbbYYbbbYYbbbbbbkkbGGGkkGGGGkkGGGGkkGGGGkkbbbbkkbbbb..............",
-    ".bbbbbbbbbbbbbbbbbkkbbbbkkbbbbkkbbbbkkbbbbkkbbbbkkbbbb..............",
-    "..GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG...............",
-    "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB................",
-    "BB.BkBBBkBBBkBBBkBBBkBBBkBBBkBBBkBBBkBBBkBBBkBBBkBB.................",
-    "BB.wwwbwwwwwbwwwwwbwwwwwbwwwwwbwwwwwbwwwwwbwwwwwbww.................",
-    "BB..BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB..................",
-    "BB..kBBBkBBBkBBBkBBBkBBBkBBBkBBBkBBBkBBBkBBBkBBBk...................",
-    "BB....BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB....................",
-    "BB......BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB....................",
-    "........BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB.....................",
-    "....................................................................",
-    "....................................................................",
+/// Ship in characters, bow to the right; the last row is its wake.
+const SHIP: [&str; 9] = [
+    r"                 |~",
+    r"           |/    w",
+    r"          / (   (|   \",
+    r"         /( (/   |)  |\",
+    r"  ____  ( (/    (|   | )  ,",
+    r" |----\ (/ |    /|   |'\ /^;",
+    r"\---*---Y--+-----+---+--/(",
+    r" \------*---*--*---*--/",
+    r"  '~~ ~~~~~~~~~~~~~~~",
 ];
-/// Sprite point that sits on the water: midships, on the design waterline.
-const SHIP_PIVOT: (f32, f32) = (29.0, 52.5);
-/// Sprite rows of hull below the waterline at rest.
-const SHIP_DRAFT_PX: f32 = 5.5;
-/// Topmost sprite row the sea may cover.
-const SHIP_WASH_ROW: f32 = 49.0;
-/// Hull length at the waterline, in sprite pixels.
-const SHIP_HULL_PX: f32 = 54.0;
+const SHIP_W: usize = 28;
+/// Art point that sits on the water: midships, on the design waterline.
+const SHIP_PIVOT: (f32, f32) = (12.0, 7.4);
+/// Rows of hull below the waterline at rest.
+const SHIP_DRAFT: f32 = 0.9;
+const SHIP_WAKE_ROW: usize = 8;
+/// Hull length at the waterline, in cells.
+const SHIP_HULL: f32 = 23.0;
 
-fn ship_rgb(ch: u8) -> Option<(u8, u8, u8)> {
-    Some(match ch {
-        b'k' => (38, 22, 14),    // tar / outline
-        b'B' => (86, 48, 24),    // dark planks
-        b'b' => (128, 76, 36),   // planks
-        b'w' => (176, 118, 60),  // light planks, rails
-        b'm' => (110, 66, 34),   // masts, yards
-        b'G' => (226, 176, 64),  // gold trim
-        b'Y' => (250, 210, 90),  // lit windows
-        b'S' => (240, 230, 200), // sails
-        b's' => (200, 186, 150), // sail shade
-        b'F' => (44, 44, 48),    // jolly roger
-        b'W' => (240, 240, 240), // skull
-        _ => return None,
-    })
+/// Colours from the blackpearl palette, by part.
+fn ship_rgb(row: usize, col: usize, ch: char) -> (u8, u8, u8) {
+    const MAST: (u8, u8, u8) = (0x8c, 0x91, 0x8d);
+    const HULL: (u8, u8, u8) = (0xb8, 0x97, 0x3f);
+    const TRIM: (u8, u8, u8) = (0xd9, 0xb8, 0x5a);
+    match (row, col, ch) {
+        (SHIP_WAKE_ROW, ..) => (0x7f, 0xe0, 0xa0),         // wake: ghost green
+        (_, _, '~') => (0x3c, 0xb3, 0x71),                 // flag: sea green
+        (_, _, 'w') => TRIM,                               // crow's nest
+        (_, 11 | 17 | 21, '|') => MAST,
+        (4..=5, 22.., _) => MAST,                          // bowsprit
+        (6.., _, '*') => (0x5f, 0xd1, 0xb5),               // lit ports
+        (6.., _, 'Y' | '+') => TRIM,
+        (6.., ..) | (4..=5, ..=6, _) => HULL,              // hull, stern castle
+        _ => (0xe6, 0xec, 0xe7),                           // sails
+    }
 }
 
 const SHIP_HZ: f32 = 240.0;
@@ -682,7 +674,11 @@ const SHIP_HEAVE_ZETA: f32 = 0.6;
 /// Pitch spring: natural frequency (rad/s) and damping ratio.
 const SHIP_PITCH_W: f32 = 5.0;
 const SHIP_PITCH_ZETA: f32 = 0.45;
-const SHIP_MAX_PITCH: f32 = 0.36;
+const SHIP_MAX_PITCH: f32 = 0.26;
+/// In the air: radians of pitch per row/s of vertical speed (before the
+/// atan), and the limit.
+const SHIP_AIR_PITCH: f32 = 0.05;
+const SHIP_MAX_AIR_PITCH: f32 = 0.4;
 /// Surge: how hard the ship slides down a wave face, and the mooring
 /// spring/damper that brings it back.
 const SHIP_SURGE_PUSH: f32 = 7.0;
@@ -718,11 +714,10 @@ impl Ship {
     }
 
     fn new(c: &Cfg, wave: &Wave, cols: f32) -> Self {
-        let scale = c.ship_scale as f32;
         let aspect = c.cell_h as f32 / c.cell_w as f32;
-        let half_hull = SHIP_HULL_PX * scale / c.cell_w as f32 / 2.0;
-        let draft = SHIP_DRAFT_PX * scale / c.cell_h as f32;
-        let half_extent = SHIP_W as f32 * scale / c.cell_w as f32;
+        let half_hull = SHIP_HULL / 2.0;
+        let draft = SHIP_DRAFT;
+        let half_extent = SHIP_W as f32;
         let span = cols + 2.0 * half_extent;
         let mut ship = Ship {
             track: Vec::new(),
@@ -776,11 +771,15 @@ impl Ship {
             // pull it down faster than it falls: off a sharp crest it flies.
             vy += lift.min(gravity) * dt;
             y += vy * dt;
-            // Pitch towards the water's slope; in the air it just coasts.
+            // Pitch towards the water's slope.
             let px_slope = slope * aspect;
-            let target = (px_slope.atan() * 0.75).clamp(-SHIP_MAX_PITCH, SHIP_MAX_PITCH);
+            let afloat = (px_slope.atan() * 0.75).clamp(-SHIP_MAX_PITCH, SHIP_MAX_PITCH);
+            // Airborne it points along its fall: bow up while rising, bow
+            // down as it drops back.
+            let flying = (vy * SHIP_AIR_PITCH).atan().clamp(-SHIP_MAX_AIR_PITCH, SHIP_MAX_AIR_PITCH);
+            let target = afloat * wet + flying * (1.0 - wet);
             let k = SHIP_PITCH_W * SHIP_PITCH_W;
-            om += (k * (0.25 + 0.75 * wet) * (target - th) - 2.0 * SHIP_PITCH_ZETA * SHIP_PITCH_W * om) * dt;
+            om += (k * (target - th) - 2.0 * SHIP_PITCH_ZETA * SHIP_PITCH_W * om) * dt;
             th += om * dt;
             // Surge.
             vx += (SHIP_SURGE_PUSH * wet * px_slope.clamp(-1.5, 1.5) - SHIP_SURGE_K * xo - SHIP_SURGE_DAMP * vx) * dt;
@@ -810,48 +809,42 @@ impl Ship {
         (a.0 + (b.0 - a.0) * k, a.1 + (b.1 - a.1) * k, a.2 + (b.2 - a.2) * k)
     }
 
-    /// Paint the ship into `frame`; returns the touched pixel rectangle
-    /// (x0, y0, x1, y1), end-exclusive. `surf` is the water surface row per
-    /// cell column for this frame: hull pixels inside water cells only show
-    /// through faintly, so the ship sits in the sea rather than on it.
-    fn draw(&self, frame: &mut [u8], c: &Cfg, surf: &[f32], t: f32) -> (usize, usize, usize, usize) {
+    /// Paint the ship's characters into `frame`, over the rasterised grid,
+    /// at pixel positions so it moves smoothly. Pitch is a shear: columns
+    /// slide up or down and the glyphs stay upright. Returns the touched
+    /// pixel rectangle (x0, y0, x1, y1), end-exclusive. Every character,
+    /// wake included, is opaque and in front of the waves.
+    fn draw(&self, frame: &mut [u8], raster: &mut Raster, c: &Cfg, t: f32) -> (usize, usize, usize, usize) {
         let (xo, y, th) = self.state(t);
-        let scale = c.ship_scale as f32;
-        let cxp = (self.base_x(t) + xo) * c.cell_w as f32;
-        let cyp = y * c.cell_h as f32;
-        let r = (SHIP_W as f32).hypot(SHIP_H as f32) * scale;
-        let clamp = |v: f32, hi: usize| v.clamp(0.0, hi as f32) as usize;
-        let (x0, x1) = (clamp(cxp - r, c.width), clamp(cxp + r, c.width));
-        let (y0, y1) = (clamp(cyp - r, c.height), clamp(cyp + r, c.height));
-        let (sin, cos) = th.sin_cos();
-        for py in y0..y1 {
-            let row = (py / c.cell_h) as f32;
-            for px in x0..x1 {
-                let (dx, dy) = (px as f32 + 0.5 - cxp, py as f32 + 0.5 - cyp);
-                let u = ((dx * cos + dy * sin) / scale + SHIP_PIVOT.0).floor();
-                let v = ((dy * cos - dx * sin) / scale + SHIP_PIVOT.1).floor();
-                if u < 0.0 || v < 0.0 || u >= SHIP_W as f32 || v >= SHIP_H as f32 {
+        let (cw, chh) = (c.cell_w as f32, c.cell_h as f32);
+        let left = (self.base_x(t) + xo - SHIP_PIVOT.0) * cw;
+        let top = (y - SHIP_PIVOT.1) * chh;
+        let slope = th.tan();
+        let (mut bx0, mut by0, mut bx1, mut by1) = (c.width, c.height, 0usize, 0usize);
+        for (r, line) in SHIP.iter().enumerate() {
+            // The ship is solid: the gaps inside it hide the sea behind too.
+            let lo = line.find(|ch| ch != ' ').unwrap();
+            // (not the gap under the bowsprit)
+            let hi = if (4..=5).contains(&r) { 23 } else { line.len() };
+            for (u, ch) in line.chars().enumerate() {
+                let solid = r != SHIP_WAKE_ROW && (ch != ' ' || (u >= lo && u < hi));
+                if ch == ' ' && !solid {
                     continue;
                 }
-                let Some(rgb) = ship_rgb(SHIP[v as usize].as_bytes()[u as usize]) else {
-                    continue;
-                };
-                // Water only laps the hull: from the wale down it is drawn
-                // over the ship, above that the ship is in front of the sea.
-                let depth = row + 0.5 - surf[px / c.cell_w];
-                let alpha = if depth < 0.0 || v < SHIP_WASH_ROW {
-                    1.0
-                } else {
-                    0.28 * (1.0 - depth / 3.0)
-                };
-                if alpha <= 0.0 {
+                let x = (left + u as f32 * cw).round() as i32;
+                let dy = (u as f32 + 0.5 - SHIP_PIVOT.0) * cw * slope;
+                let yy = (top + r as f32 * chh + dy).round() as i32;
+                if x + c.cell_w as i32 <= 0 || yy + c.cell_h as i32 <= 0 || x >= c.width as i32 || yy >= c.height as i32 {
                     continue;
                 }
-                let o = (py * c.width + px) * 4;
-                let m = lerp_rgb((frame[o], frame[o + 1], frame[o + 2]), rgb, alpha);
-                frame[o..o + 3].copy_from_slice(&[m.0, m.1, m.2]);
+                let bg = solid.then_some(c.sky);
+                raster.blit(frame, c.width, c.height, x, yy, ch, ship_rgb(r, u, ch), bg);
+                bx0 = bx0.min(x.max(0) as usize);
+                by0 = by0.min(yy.max(0) as usize);
+                bx1 = bx1.max(((x + c.cell_w as i32).max(0) as usize).min(c.width));
+                by1 = by1.max(((yy + c.cell_h as i32).max(0) as usize).min(c.height));
             }
         }
-        (x0, y0, x1, y1)
+        (bx0.min(bx1), by0.min(by1), bx1, by1)
     }
 }
