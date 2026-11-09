@@ -6,7 +6,7 @@ HOST        := $(shell cat /etc/hostname)
         $(addprefix uninstall-,$(VARIANTS)) \
         $(addprefix restow-,$(VARIANTS)) \
         $(addprefix update-,$(VARIANTS)) \
-        update-all install uninstall restow setup-cosmic
+        update-all install uninstall restow setup-cosmic theme-cosmic
 
 # --- Per-variant targets ---
 
@@ -36,6 +36,11 @@ update-cosmic:
 # the wallpaper video and its service. See cosmic/README.md.
 setup-cosmic:
 	cosmic/_setup/install.sh
+
+# Switch the cosmic entry's look: make theme-cosmic THEME=blackpearl
+# (themes are the directories in cosmic/_setup/themes; gruvbox is the default)
+theme-cosmic:
+	cosmic/_setup/theme.sh $(THEME)
 
 # Update all variants at once (for files common to every variant, e.g. user-dirs)
 update-all: $(addprefix update-,$(VARIANTS))

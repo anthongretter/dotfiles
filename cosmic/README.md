@@ -15,6 +15,7 @@ wave screensaver as an animated wallpaper and lock screen.
 | `_setup/install.sh` | Builds and installs everything that isn't a dotfile (below) |
 | `_setup/cosmic-greeter-wave-lock.patch` | Patch for COSMIC's locker: draws the wave live behind the password prompt |
 | `_setup/wave-wallpaper/` | Generator for the wallpaper video; `wave.rs` is the same renderer the patch adds |
+| `_setup/theme.sh`, `_setup/themes/` | Alternative looks for this entry (below) |
 | `_setup/files.txt` | Which live files belong to this entry (used by `make update-cosmic`) |
 
 GTK colours aren't stored: COSMIC regenerates `gtk-{3,4}.0/gtk.css` from the theme.
@@ -36,6 +37,35 @@ make update-cosmic    # copy the live files listed in _setup/files.txt into the 
 
 On a machine where `~/.config` is already stowed from another entry (e.g.
 `fern`), don't `install-cosmic` on top of it; use `update-cosmic` to snapshot.
+
+## Themes
+
+Gruvbox is the default look. `_setup/themes/<name>/` holds an alternative:
+files laid out as in `$HOME` that replace the live ones, plus `_theme.sh`
+(micro/Fresh/Flame theme names, wallpaper), `_vscode.json` (merged into VS
+Code's settings) and `_flame-theme.json` (added to Flame's custom themes).
+
+```sh
+make theme-cosmic THEME=blackpearl   # switch
+make theme-cosmic THEME=gruvbox      # back to the default
+```
+
+Switching rewrites live files only; going back restores them from the
+committed `cosmic/` tree. The wallpaper video is rendered the first time a
+theme is used.
+
+| Theme | Look |
+|---|---|
+| `gruvbox` | Gruvbox Dark, blue wave with code words |
+| `blackpearl` | Sea green (`#2e8b57` / `#3cb371`) on opaque black and NES-console grays, ghost-ship green and old gold as secondary colours, red only for errors. Wallpaper: a pirate ship riding a calmer sea-green swell |
+
+COSMIC's computed theme (`com.system76.CosmicTheme.Dark*`) is stored
+pre-built, generated from `blackpearl.ron`. After editing the `.ron`, import
+it in Settings > Appearance and copy the two directories back into the theme.
+
+Not themed: the patched lock screen still draws the gruvbox wave, and VS
+Code keeps the blackpearl colour overrides in its settings (they only apply
+to "Default Dark Modern", so they are inert under Gruvbox).
 
 ## The lock screen patch
 
