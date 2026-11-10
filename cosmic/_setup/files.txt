@@ -9,4 +9,5 @@
 .config/Code/User/settings.json
 .config/fresh/config.json
 .config/systemd/user/fresh-wave-wallpaper.service
+.bashrc
 Pictures/wallpapers/fresh-wave-lock.png
